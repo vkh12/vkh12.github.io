@@ -376,23 +376,28 @@ p {
     color: white;
     font-size: 24px;
 }
-#hero .btn-get-started {
-    font-family: "Roboto", sans-serif;
+#hero .btn-contact {
+    font-size:16px;
     font-weight: 400;
-    font-style: normal;
+    text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 50px;
-  transition: 0.5s;
-  border: 2px solid #fff;
-  color: #fff;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    width: auto; 
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-offset: 0px;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-#hero .btn-get-started:hover {
-  color: black;
-  background: white;
+#hero .btn-contact:hover {
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    background: rgba(255, 255, 255, 0.25);
 }
 @media (min-width: 1024px) {
   #hero {
@@ -432,6 +437,7 @@ p {
     font-style: normal;
     color: white;
     font-size: 16px;
+    line-height: 1.5rem;
   }
 }
 
@@ -706,9 +712,30 @@ p {
 }
 
 @media (max-width: 768px) {
-  #portfolio {
-    padding: 50px;
-  }
+    #portfolio {
+        padding: 32px 20px;
+    }
+    #portfolio h1 {
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        padding-bottom: 8px;
+    }
+    #portfolio h2 {
+        font-family: "PPTalisman",sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: -2%;
+        color: white;
+    }
+    #portfolio h3 {
+        font-size: 16px;
+        color: white;
+    }
+    #portfolio p {
+    margin-bottom: 0;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -919,21 +946,53 @@ p {
     color: white;
     font-size: 24px;
 }
-#footer .btn-get-started {
-    font-family: "Roboto", sans-serif;
+#footer .btn {
+    color: #fff;
+    cursor: pointer;
+    font-size:16px;
     font-weight: 400;
-    font-style: normal;
+    margin: 0 .25em .5em;
+    position: relative;
+    text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 50px;
-  transition: 0.5s;
-  border: 2px solid #fff;
-  color: #fff;
+    border-radius: 50px;
+    width: auto; 
+    display: inline-block;
+    padding: 8px 16px;
 }
-#footer .btn-get-started:hover {
-  color: black;
-  background: white;
+#footer .btn-interests {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-offset: 0px;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
+#footer .btn-interests:hover {
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+    #footer h1 {
+      font-family: "PPTalisman",sans-serif;
+      font-size: 84px;
+      font-weight: 600;
+      letter-spacing: -2%;
+      color: #f5eee6;
+      display: block;
+      margin-block-start: 0.1em;
+      margin-block-end: 0.1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+    #footer p {
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: white;
+      font-size: 18px;
+      line-height: 1.5rem;
+    }
+  }
