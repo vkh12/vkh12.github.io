@@ -1,0 +1,939 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+@font-face {
+    font-family: Migra; 
+    src: url('Migra-Extralight.otf');
+}
+@font-face {
+    font-family: PPTalisman;
+    src: url(PPTalisman-Compressed-Medium.otf);
+}
+body {
+  font-family: "Raleway", sans-serif;
+  color: black;
+  line-height: 36px;
+  font-weight: 400; 
+  font-size: 16px;
+}
+
+a {
+  color: #A31111;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #A31111;
+  text-decoration: none;
+}
+
+h1, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  color: black;
+  line-height: 36px;
+  font-weight: 400; 
+  font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #1bac91;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #21cfaf;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;  
+  padding: 24px 20px;
+  transition: background 0.3s ease;
+}
+#header .logo h1 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "Migra", sans-serif;
+    font-style: normal;
+    padding: 8px 8px;
+
+}
+#header .logo h1 a, #header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar > ul > li + li {
+  margin-left: 8px;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 3px;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+  visibility: visible;
+  width: 100%;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #fff;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #062822;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #A31111;
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: black;
+  transition: 0.3s;
+  z-index: 0;
+}
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+.navbar-mobile > ul > li + li {
+  margin: 0;
+}
+.navbar-mobile a:hover:before, .navbar-mobile li:hover > a:before, .navbar-mobile .active:before {
+  visibility: hidden;
+}
+.navbar-mobile a, .navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+}
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  color: #A31111;
+}
+.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+  color: #1bac91;
+}
+.navbar-mobile .dropdown > .dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: calc(100vh);
+  background: url("img/hero-bg.jpg") center center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero .container {
+  z-index: 1;
+}
+#hero .uppercase {
+    text-transform: uppercase;
+}
+#hero .symbol{
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 36px;
+    display: block;
+    position: absolute;
+}
+#hero .split {
+    display: inline;
+}
+#hero h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 164px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+    display: block;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#hero h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 36px;
+    display: block;
+    position: absolute;
+}
+#hero p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
+}
+#hero .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+#hero .btn-get-started:hover {
+  color: black;
+  background: white;
+}
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 992px) {
+  #hero {
+    height: calc(100vh);
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 84px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+    display: block;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  #hero h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 24px;
+    display: block;
+    position: absolute;
+  }
+  #hero p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #131313;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 8px;
+}
+h2 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: white;
+}
+h3 {
+    font-size: 20px;
+    color: white;
+}
+p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 20px 0;
+  background-color: #f7f7f7;
+  min-height: 40px;
+  margin-top: 72px;
+}
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 60px;
+  }
+}
+.breadcrumbs h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .breadcrumbs h2 {
+    margin: 0 0 10px 0;
+  }
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #6c757d;
+  content: "/";
+}
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#about {
+  background: white;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+}
+#about h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  color: black;
+}
+#about h2 {
+  color: black;
+  margin-bottom: 35px;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 3%;
+}
+#about p {
+  color: black;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  #about {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 992px) {
+  #about {
+   
+  }
+}
+@media (max-width: 768px) {
+  #about h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #about h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    letter-spacing: 3%;
+  }
+  #about p {
+    color: black;
+    font-size: 16px;
+    letter-spacing: 3%;
+    font-weight: 300;
+    text-align: left;
+    padding: 20px;
+  }
+}
+
+#about-header {
+  width: 100%;
+  height: calc(90vh);
+  background: white;
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5a656e;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  color: #A31111;
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(44, 73, 100, 0.6);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.portfolio .portfolio-wrap .portfolio-info h3 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 200;
+}
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #ffffff;
+  font-size: 18px;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #e684ae;
+}
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+  top: calc(50% - 48px);
+}
+.portfolio .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  bottom: calc(50% - 50px);
+}
+
+@media (max-width: 768px) {
+  #portfolio {
+    padding: 50px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #1bac91;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #1bac91;
+}
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(33, 65, 60, 0.08);
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Details-Header
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Zumper
+--------------------------------------------------------------*/
+#zumper {
+  padding: 20px;
+}
+#zumper-header {
+  width: 100%;
+  height: calc(30vh);
+  background: url("img/project/Zumper/ZumperHeader.jpeg") center center;
+  height: calc(36vh);
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+}
+
+#zumper h1 {
+  text-transform: uppercase; 
+  padding-top: 60px; 
+  font-weight: 600; 
+  letter-spacing: 5px; 
+  font-size: 16px; 
+  color: #656565;
+}
+#zumper h2 {
+  font-size: 28px;
+  color: #A31111;
+  font-weight: 600;
+  padding-top: 20px;
+}
+#zumper h3 {
+  font-size: 24px;
+  color: black;
+  text-align: left;
+  padding-bottom: 20px;
+}
+#zumper h5 {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+#zumper h4 {
+  font-size: 16px;
+  color: #A31111;
+  text-align: center;
+}
+#zumper p {
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+#zumper .userpersona { 
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  max-height: 20%;
+
+}
+
+#zumper .container {
+  padding: 0 15% 0 15%;
+}
+
+@media (max-width: 992px) {
+  #zumper .container {
+    padding: 0 5% 0 5%;
+  }
+}
+
+/*--------------------------------------------------------------
+# AfterSchool
+--------------------------------------------------------------*/
+#afterschool-header {
+  width: 100%;
+  height: calc(30vh);
+  background: url("img/project/AfterSchool/AfterSchoolHeader.jpg") center center;
+  height: calc(36vh);
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+}
+
+/*--------------------------------------------------------------
+# Virtual Vendors
+--------------------------------------------------------------*/
+#virtualvendors-header {
+  width: 100%;
+  height: calc(30vh);
+  background: url("img/project/VirtualVendors/VirtualVendorsHeader.jpeg") center center;
+  height: calc(36vh);
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    width: 100%;
+    height: calc(100vh);
+    background: url("img/hero-bg.jpg") center center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+  }
+#footer:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+#footer .container {
+    z-index: 2;
+  }
+
+  #footer h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 164px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+    display: block;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#footer h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 36px;
+    display: block;
+    position: absolute;
+}
+#footer p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
+}
+#footer .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+#footer .btn-get-started:hover {
+  color: black;
+  background: white;
+}
