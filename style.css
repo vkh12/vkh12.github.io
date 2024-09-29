@@ -471,9 +471,6 @@ h3 {
     font-size: 20px;
     color: white;
 }
-p {
-  margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -531,61 +528,55 @@ p {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-#about {
-  background: white;
-  background-size: cover;
-  position: relative;
-  padding: 20px;
-}
+
 #about h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 56px;
-  color: black;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 8px;
 }
 #about h2 {
-  color: black;
-  margin-bottom: 35px;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 3%;
+    font-family: "PPTalisman",sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: white;
 }
-#about p {
-  color: black;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: left;
+#about h3 {
+    font-size: 20px;
+    color: white;
 }
-@media (min-width: 1024px) {
-  #about {
-    background-attachment: fixed;
-  }
+#about p{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
 }
-@media (max-width: 992px) {
-  #about {
-   
-  }
+#about .uppercase {
+    text-transform: uppercase;
 }
+
 @media (max-width: 768px) {
-  #about h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  #about h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-    letter-spacing: 3%;
-  }
-  #about p {
-    color: black;
-    font-size: 16px;
-    letter-spacing: 3%;
-    font-weight: 300;
-    text-align: left;
-    padding: 20px;
-  }
+    #about h1 {
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        padding-bottom: 8px;
+    }
+    #about h2 {
+        font-family: "PPTalisman",sans-serif;
+        font-size: 64px;
+        font-weight: 600;
+        letter-spacing: -2%;
+        color: white;
+    }
+    #about h3 {
+        font-size: 20px;
+        color: white;
+    }
 }
 
 #about-header {
@@ -595,6 +586,33 @@ p {
   background-size: cover;
   position: relative;
   margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 32px 20px;
+    }
+    #about h1 {
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        padding-bottom: 8px;
+    }
+    #about h2 {
+        font-family: "PPTalisman",sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: -2%;
+        color: white;
+    }
+    #about h3 {
+        font-size: 16px;
+        color: white;
+    }
+    #about p {
+    margin-bottom: 0;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -611,7 +629,6 @@ p {
   text-align: center;
   background: #fff;
   border-radius: 50px;
-  padding: 2px 15px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
 }
 .portfolio #portfolio-flters li {
@@ -742,7 +759,7 @@ p {
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
