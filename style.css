@@ -116,6 +116,7 @@ p {
 */
 .navbar {
   padding: 0;
+  margin-top:-10px;
 }
 .navbar ul {
   margin: 0;
@@ -126,9 +127,6 @@ p {
 }
 .navbar li {
   position: relative;
-}
-.navbar > ul > li + li {
-  margin-left: 8px;
 }
 .navbar a, .navbar a:focus {
   display: flex;
@@ -141,7 +139,7 @@ p {
   position: relative;
 }
 .navbar a i, .navbar a:focus i {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 0;
   margin-left: 5px;
 }
@@ -149,7 +147,7 @@ p {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 3px;
   bottom: 3px;
   left: 0;
   background-color: white;
@@ -169,29 +167,28 @@ p {
   left: 0;
   top: 100%;
   margin: 0;
-  padding: 10px 0;
+  padding: 8px 0;
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background-color: #131313;
   transition: 0.3s;
 }
 .navbar .dropdown ul li {
   min-width: 200px;
 }
 .navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 8px 16px;
+  font-size: 16px;
   text-transform: none;
   font-weight: 500;
   color: #062822;
 }
 .navbar .dropdown ul a i {
-  font-size: 12px;
+  font-size: 16px;
 }
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #A31111;
+  color: #f5eee6;
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -222,7 +219,7 @@ p {
 */
 .mobile-nav-toggle {
   color: #fff;
-  font-size: 28px;
+  font-size: 24px;
   cursor: pointer;
   display: none;
   line-height: 0;
@@ -245,24 +242,24 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  background: black;
+  background-color: #131313;
   transition: 0.3s;
   z-index: 0;
 }
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top:16px;
+  right:16px;
 }
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #fff;
+  top: 32px;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  padding: 16px 0;
+  background-color: #131313;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -273,21 +270,21 @@ p {
   visibility: hidden;
 }
 .navbar-mobile a, .navbar-mobile a:focus {
-  padding: 10px 20px;
+  padding: 16px 16px;
   font-size: 16px;
-  color: black;
+  color: white;
 }
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #A31111;
+  color: #f5eee6;
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
-  margin: 15px;
+  margin: 8px;
 }
 .navbar-mobile .dropdown ul {
   position: static;
   display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
+  margin: 8px 16px;
+  padding: 8px 0;
   z-index: 99;
   opacity: 1;
   visibility: visible;
@@ -298,13 +295,13 @@ p {
   min-width: 200px;
 }
 .navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
+  padding: 8px 8px;
 }
 .navbar-mobile .dropdown ul a i {
-  font-size: 12px;
+  font-size: 16px;
 }
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #1bac91;
+  color: #f5eee6;
 }
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
@@ -931,12 +928,40 @@ h3 {
 --------------------------------------------------------------*/
 #virtualvendors-header {
   width: 100%;
-  height: calc(30vh);
+  height: calc(100vh);
   background: url("img/project/VirtualVendors/VirtualVendorsHeader.jpeg") center center;
-  height: calc(36vh);
+  height: calc(100vh);
   background-size: cover;
   position: relative;
-  margin-top: 50px;
+}
+
+#virtualvendors-header h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 164px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+  display: block;
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+#virtualvendors-header h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 36px;
+  display: block;
+  position: absolute;
+}
+#virtualvendors-header p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 24px;
 }
 /*--------------------------------------------------------------
 # Footer
