@@ -10,39 +10,35 @@
     src: url(PPTalisman-Compressed-Medium.otf);
 }
 body {
-  font-family: "Raleway", sans-serif;
-  color: black;
-  line-height: 36px;
-  font-weight: 400; 
-  font-size: 16px;
-}
-
-a {
-  color: #A31111;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #A31111;
-  text-decoration: none;
-}
-
-h1, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-}
-
-h2 {
-  font-family: "Raleway", sans-serif;
   color: white;
 }
-
+a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+}
+h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 164px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 36px;
+}
 p {
   font-family: "Raleway", sans-serif;
-  color: black;
-  line-height: 36px;
-  font-weight: 400; 
-  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 24px;
 }
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -229,6 +225,8 @@ p {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    margin-top: 16px;
+
   }
 
   .navbar ul {
@@ -366,6 +364,13 @@ p {
     display: block;
     position: absolute;
 }
+#hero h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
 #hero p {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -409,7 +414,7 @@ p {
 @media (max-width: 768px) {
   #hero h1 {
     font-family: "PPTalisman",sans-serif;
-    font-size: 84px;
+    font-size: 64px;
     font-weight: 600;
     letter-spacing: -2%;
     color: #f5eee6;
@@ -427,6 +432,13 @@ p {
     font-size: 24px;
     display: block;
     position: absolute;
+  }
+  #hero h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
   }
   #hero p {
     font-family: "Raleway", sans-serif;
@@ -450,24 +462,6 @@ section {
   background-color: #131313;
 }
 
-h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: white;
-    padding-bottom: 8px;
-}
-h2 {
-    font-family: "PPTalisman",sans-serif;
-    font-size: 64px;
-    font-weight: 600;
-    letter-spacing: -2%;
-    color: white;
-}
-h3 {
-    font-size: 20px;
-    color: white;
-}
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -540,16 +534,12 @@ h3 {
     letter-spacing: -2%;
     color: white;
 }
-#about h3 {
-    font-size: 20px;
-    color: white;
-}
 #about p{
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
 }
 #about .uppercase {
     text-transform: uppercase;
@@ -587,13 +577,13 @@ h3 {
     }
     #about h2 {
         font-family: "PPTalisman",sans-serif;
-        font-size: 64px;
+        font-size: 42px;
         font-weight: 600;
         letter-spacing: -2%;
         color: white;
     }
     #about h3 {
-        font-size: 20px;
+        font-size: 16px;
         color: white;
     }
 }
@@ -751,32 +741,57 @@ h3 {
   opacity: 1;
   bottom: calc(50% - 50px);
 }
-
+#portfolio h1 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 32px;
+}
+#portfolio h2 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: white;
+}
+#portfolio h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+}
+#portfolio p{
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 24px;
+}
 @media (max-width: 768px) {
-    #portfolio {
-        padding: 32px 20px;
-    }
-    #portfolio h1 {
-        font-size: 18px;
-        font-weight: 400;
-        text-transform: uppercase;
-        color: white;
-        padding-bottom: 8px;
-    }
-    #portfolio h2 {
-        font-family: "PPTalisman",sans-serif;
-        font-size: 48px;
-        font-weight: 600;
-        letter-spacing: -2%;
-        color: white;
-    }
-    #portfolio h3 {
-        font-size: 16px;
-        color: white;
-    }
-    #portfolio p {
-    margin-bottom: 0;
-    }
+  #portfolio h1 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 24px;
+  }
+  #portfolio h2 {
+      font-family: "PPTalisman",sans-serif;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: -2%;
+      color: white;
+  }
+  #portfolio h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -901,12 +916,12 @@ h3 {
 }
 
 #zumper .container {
-  padding: 0 15% 0 15%;
+  padding: 0 25% 0 25%;
 }
 
 @media (max-width: 992px) {
   #zumper .container {
-    padding: 0 5% 0 5%;
+    padding: 0 15% 0 15%;
   }
 }
 
@@ -934,10 +949,18 @@ h3 {
   background-size: cover;
   position: relative;
 }
-
+#virtualvendors-header:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 #virtualvendors-header h1 {
   font-family: "PPTalisman",sans-serif;
-  font-size: 164px;
+  font-size: 124px;
   font-weight: 600;
   letter-spacing: -2%;
   color: #f5eee6;
@@ -952,16 +975,115 @@ h3 {
   font-weight: 400;
   font-style: normal;
   color: #f5eee6;
-  font-size: 36px;
+  font-size: 32px;
   display: block;
   position: absolute;
 }
-#virtualvendors-header p {
+@media (min-width: 1024px) {
+  #virtualvendors-header {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 992px) {
+  #virtualvendors-header  {
+    height: calc(100vh);
+  }
+}
+@media (max-width: 768px) {
+  #virtualvendors-header  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+    display: block;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  #virtualvendors-header h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 24px;
+    display: block;
+    position: absolute;
+  }
+} 
+#virtualvendors-header .container {
+  padding: 0 10% 0 10%;
+}
+@media (max-width: 992px) {
+  #virtualvendors-header .container {
+    padding: 0 5% 0 5%;
+  }
+}
+
+#virtualvendors .section-bg {
+  background-color: #131313;
+}
+#virtualvendors h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 104px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+#virtualvendors h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 28px;
+}
+#virtualvendors p {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+@media (min-width: 1024px) {
+  #virtualvendors {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #virtualvendors  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+  #virtualvendors h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 24px;
+  }
+  #virtualvendors p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+}
+#virtualvendors .container {
+  padding: 0 10% 0 10%;
+}
+
+@media (max-width: 992px) {
+  #virtualvendors .container {
+    padding: 0 5% 0 5%;
+  }
 }
 /*--------------------------------------------------------------
 # Footer
@@ -1046,7 +1168,7 @@ h3 {
 @media (max-width: 768px) {
     #footer h1 {
       font-family: "PPTalisman",sans-serif;
-      font-size: 84px;
+      font-size: 64px;
       font-weight: 600;
       letter-spacing: -2%;
       color: #f5eee6;
@@ -1061,7 +1183,7 @@ h3 {
       font-weight: 400;
       font-style: normal;
       color: white;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.5rem;
     }
   }
