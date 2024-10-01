@@ -634,11 +634,6 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-#portfolio .img{
-  width: 50%;
-  height: calc(50vh);
-  position: relative;
-}
 #portfolio h1 {
   font-family: "Migra", sans-serif;
   font-weight: 400;
