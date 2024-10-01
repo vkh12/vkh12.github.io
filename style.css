@@ -23,6 +23,7 @@ h1 {
   font-weight: 600;
   letter-spacing: -2%;
   color: #f5eee6;
+  font-feature-settings: "lnum";
 }
 h2 {
   font-family: "Migra", sans-serif;
@@ -30,6 +31,7 @@ h2 {
   font-style: normal;
   color: #f5eee6;
   font-size: 36px;
+  font-feature-settings: "lnum";
 }
 p {
   font-family: "Raleway", sans-serif;
@@ -37,6 +39,7 @@ p {
   font-style: normal;
   color: white;
   font-size: 24px;
+  font-feature-settings: "lnum";
 }
 
 
@@ -314,7 +317,6 @@ p {
   background: url("img/hero-bg.jpg") center center;
   background-size: cover;
   position: relative;
-  padding: 0;
 }
 #hero:before {
   content: "";
@@ -632,114 +634,10 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  background: #fff;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
-}
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #5a656e;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  color: #A31111;
-}
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
+#portfolio .img{
+  width: 50%;
+  height: calc(50vh);
   position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(44, 73, 100, 0.6);
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 30px;
-  bottom: 30px;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-.portfolio .portfolio-wrap .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-}
-.portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 500;
-}
-.portfolio .portfolio-wrap .portfolio-info h3 {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 200;
-}
-.portfolio .portfolio-wrap .portfolio-info p {
-  color: #ffffff;
-  font-size: 18px;
-}
-.portfolio .portfolio-wrap .portfolio-links {
-  opacity: 0;
-  left: 0;
-  right: 0;
-  bottom: 10%;
-  text-align: center;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
-}
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
-  margin: 0 2px;
-  font-size: 28px;
-  display: inline-block;
-  transition: 0.3s;
-}
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #e684ae;
-}
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-.portfolio .portfolio-wrap:hover .portfolio-info {
-  opacity: 1;
-  top: calc(50% - 48px);
-}
-.portfolio .portfolio-wrap:hover .portfolio-links {
-  opacity: 1;
-  bottom: calc(50% - 50px);
 }
 #portfolio h1 {
   font-family: "Migra", sans-serif;
@@ -795,137 +693,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 20px;
-}
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #1bac91;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #1bac91;
-}
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(33, 65, 60, 0.08);
-}
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
-
-/*--------------------------------------------------------------
-# Details-Header
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
-# Zumper
---------------------------------------------------------------*/
-#zumper {
-  padding: 20px;
-}
-#zumper-header {
-  width: 100%;
-  height: calc(30vh);
-  background: url("img/project/Zumper/ZumperHeader.jpeg") center center;
-  height: calc(36vh);
-  background-size: cover;
-  position: relative;
-  margin-top: 50px;
-}
-
-#zumper h1 {
-  text-transform: uppercase; 
-  padding-top: 60px; 
-  font-weight: 600; 
-  letter-spacing: 5px; 
-  font-size: 16px; 
-  color: #656565;
-}
-#zumper h2 {
-  font-size: 28px;
-  color: #A31111;
-  font-weight: 600;
-  padding-top: 20px;
-}
-#zumper h3 {
-  font-size: 24px;
-  color: black;
-  text-align: left;
-  padding-bottom: 20px;
-}
-#zumper h5 {
-  font-size: 18px;
-  color: black;
-  text-align: center;
-}
-
-#zumper h4 {
-  font-size: 16px;
-  color: #A31111;
-  text-align: center;
-}
-#zumper p {
-  font-size: 16px;
-  color: black;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#zumper .userpersona { 
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 20px;
-  max-height: 20%;
-
-}
-
-#zumper .container {
-  padding: 0 25% 0 25%;
-}
-
-@media (max-width: 992px) {
-  #zumper .container {
-    padding: 0 15% 0 15%;
-  }
-}
-
-/*--------------------------------------------------------------
 # AfterSchool
 --------------------------------------------------------------*/
 #afterschool-header {
@@ -941,15 +708,16 @@ section {
 /*--------------------------------------------------------------
 # Virtual Vendors
 --------------------------------------------------------------*/
-#virtualvendors-header {
+
+#virtualvendors-hero{
   width: 100%;
   height: calc(100vh);
-  background: url("img/project/VirtualVendors/VirtualVendorsHeader.jpeg") center center;
-  height: calc(100vh);
+  background: url("img/project/VirtualVendors/VirtualVendorsHeader.jpg") center center;
   background-size: cover;
   position: relative;
+  z-index: -2;
 }
-#virtualvendors-header:before {
+#virtualvendors-hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -957,76 +725,70 @@ section {
   top: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
-#virtualvendors-header h1 {
+#virtualvendors-hero .uppercase {
+  text-transform: uppercase;
+}
+#virtualvendors-hero h1 {
   font-family: "PPTalisman",sans-serif;
-  font-size: 124px;
+  font-size: 104px;
   font-weight: 600;
   letter-spacing: -2%;
-  color: #f5eee6;
-  display: block;
-  margin-block-start: 0.1em;
-  margin-block-end: 0.1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  color: white;
 }
-#virtualvendors-header h2 {
+#virtualvendors-hero h2 {
   font-family: "Migra", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: white;
+  font-size: 28px;
+}
+#virtualvendors-hero h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: -2%;
   color: #f5eee6;
-  font-size: 32px;
-  display: block;
-  position: absolute;
-}
-@media (min-width: 1024px) {
-  #virtualvendors-header {
-    background-attachment: fixed;
-  }
-}
-@media (max-width: 992px) {
-  #virtualvendors-header  {
-    height: calc(100vh);
-  }
 }
 @media (max-width: 768px) {
-  #virtualvendors-header  h1 {
+  #virtualvendors-hero  h1 {
     font-family: "PPTalisman",sans-serif;
     font-size: 64px;
     font-weight: 600;
     letter-spacing: -2%;
-    color: #f5eee6;
-    display: block;
-    margin-block-start: 0.1em;
-    margin-block-end: 0.1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    color: white;
   }
-  #virtualvendors-header h2 {
+  #virtualvendors-hero h2 {
     font-family: "Migra", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #f5eee6;
+    color: white;
     font-size: 24px;
-    display: block;
-    position: absolute;
   }
-} 
-#virtualvendors-header .container {
+  #virtualvendors-hero h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+}
+#virtualvendors-hero .container {
   padding: 0 10% 0 10%;
 }
+
 @media (max-width: 992px) {
-  #virtualvendors-header .container {
+  #virtualvendors-hero .container {
     padding: 0 5% 0 5%;
   }
 }
-
 #virtualvendors .section-bg {
   background-color: #131313;
 }
 #virtualvendors h1 {
   font-family: "PPTalisman",sans-serif;
-  font-size: 104px;
+  font-size: 64px;
   font-weight: 600;
   letter-spacing: -2%;
   color: #f5eee6;
@@ -1085,6 +847,152 @@ section {
     padding: 0 5% 0 5%;
   }
 }
+
+/*--------------------------------------------------------------
+# Zumper
+--------------------------------------------------------------*/
+
+#zumper-hero{
+  width: 100%;
+  height: calc(100vh);
+  background: url("img/project/Zumper/ZumperHeader.jpg") center center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+#zumper-hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+#zumper-hero .uppercase {
+  text-transform: uppercase;
+}
+#zumper-hero h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 104px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: white;
+}
+#zumper-hero h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 28px;
+}
+#zumper-hero h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+@media (max-width: 768px) {
+  #zumper-hero  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: white;
+  }
+  #zumper-hero h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
+  }
+  #zumper-hero h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+}
+#zumper-hero .container {
+  padding: 0 10% 0 10%;
+}
+
+@media (max-width: 992px) {
+  #zumper-hero .container {
+    padding: 0 5% 0 5%;
+  }
+}
+#zumper .section-bg {
+  background-color: #131313;
+}
+#zumper h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+#zumper h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 28px;
+}
+#zumper p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-feature-settings: "lnum";
+}
+@media (min-width: 1024px) {
+  #zumper {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #zumper  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+  #zumper h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 24px;
+  }
+  #zumper p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+    font-feature-settings: "lnum";
+  }
+}
+#zumper .container {
+  padding: 0 10% 0 10%;
+}
+
+@media (max-width: 992px) {
+  #zumper .container {
+    padding: 0 5% 0 5%;
+  }
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
