@@ -34,19 +34,19 @@
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="afterschool-hero" class="hero-bg d-flex flex-column justify-content-center align-items-center">
-  <div class="container">
-    <h1>Afterschool</h1>
+<section id="afterschool-hero" class="afterschool-hero hero-bg d-flex flex-column justify-content-center align-items-center">
+  <div class="container afterschool-hero">
+    <h1>AfterSchool</h1>
     <h2>Conceptualized a mobile application that helps students discover and participate in extracurricular activities, 
       manage responsibilities, and foster better engagement and communication among peers.
     </h2>
     <div style="padding-top: 16px;">
-      <a href="https://www.figma.com/proto/ibHuLE04IuO1SUB3JVsC8D/AfterSchool?page-id=3%3A22&node-id=133-926&node-type=canvas&viewport=331%2C74%2C0.04&t=AzdgJVipTdBlw2wu-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=78%3A3135&show-proto-sidebar=1" 
-      class="btn" style="margin: 0 .25em .5em;">View Prototype</a>
+      <a href="" 
+      class="btn" style="margin: 0 .25em .5em;">UI/UX Design</a>
     </div>
     <div data-aos="fade-down" class="scrollto">
       <a href="#afterschool">
-        <h3 class="uppercase" style="padding-top:16px;">&#10549; read more</h3>
+        <h3 class="uppercase" style="padding-top:16px;">&#10549; scroll</h3>
       </a>
     </div>
   </div>
@@ -60,18 +60,27 @@
           <h1>Overview</h1>
           <h2>About the Project</h2>
           <div class="row">
+            <div class="col-lg-12">
+              <p>
+                The <i>AfterSchool</i> app was developed during the 2022 Rielly Douglass BOLD Externship with Microsoft. 
+                The challenge was to create a product that would encourage, inspire, and empower students to 
+                connect with each other during the global pandemic. The goal was to simplify the process of 
+                discovering and joining student organizations while improving communication and task 
+                management for both students and organization coordinators.
+              </p>
+            </div>
             <div class="col-lg-6">
               <p>
                 <b>ROLE</b>  
                 <br>
-                UI/UX Designer 
+                UI/UX Designer, Product Manager 
               </p>
             </div>
             <div class="col-lg-6">
               <p>
                 <b>TIMELINE</b>  
                 <br>
-                Feb 4 - 14, 2022 (2 weeks)
+                January 4 - 14, 2022 (2 weeks)
               </p>
             </div>
             <div class="col-lg-6">
@@ -95,17 +104,16 @@
           <div class="col-lg-6">
             <h2>The Challenge</h2> 
             <p>
-              Virtual Vendors is an online platform designed to empower street vendors and small business owners by 
-              helping them quickly set up digital storefronts. Many vendors, especially during the COVID-19 pandemic, 
-              lacked the technical knowledge or resources to transition their businesses online. 
+              The pandemic forced many student organizations to move online, resulting in disjointed communication 
+              and a lack of engagement. Students struggled to discover extracurricular activities and manage their 
+              responsibilities across multiple platforms. Organization leaders, in turn, found it difficult to keep 
+              members informed and organized due to inconsistent communication tools.
             </p>
           </div>
           <div class="col-lg-6">
             <h2>The Solution</h2> 
             <p>
-              The goal of the platform was to provide an intuitive, easy-to-use solution that enabled 
-              vendors to manage their inventory, interact with customers, and increase sales digitally—all within 
-              the constraints of a 24-hour hackathon.
+              The <i>AfterSchool</i> app is a centralized platform designed to streamline student communication, event discovery, and task management, making it easier for students and organization coordinators to connect and stay organized.
             </p>
           </div>
         </div>
@@ -113,197 +121,118 @@
 
       <div class="container align-items-center">
         <div class="col-lg-12">
-          <h1>Understanding the Problem</h1>
-          <h2>Background</h2>
+          <h1>Understanding the User</h1>
           <p>
-            Each semester, universities like Rutgers host Involvement Fairs for students to explore organizations. However, with over 800 
-            organizations available and each using its own platform for communication (like GroupMe, Discord, and Instagram), students find 
-            it challenging to stay informed. This issue became worse during the pandemic when many activities went virtual, leading to a loss of engagement.
+            The first step was to understand the key pain points experienced by both students and organization leaders. 
+            I conducted a survey and interviews with 10 college students and recent graduates to uncover common 
+            issues with communication and organization management in a virtual setting.
           </p>
-          <h2>Motivation</h2>
-          <p>
-            Students and coordinators use various communication tools—Google Classroom, Slack, Discord, GroupMe, Zoom—causing confusion and 
-            inefficiencies. Important information often gets lost across different platforms, and managing multiple organizations becomes overwhelming. 
-            There was a clear need for a unified platform to streamline communication and organization management.
-          </p>
+          <h2>Key Insights</h2>
+            <ul>
+              <li><b>100% </b>of participants used social media platforms like GroupMe and Instagram to stay connected 
+                with organizations, while <b>50% </b>relied solely on email.
+              </li>
+              <li><b>90% </b>learned about clubs and events through word-of-mouth, highlighting the need for better 
+                promotion tools.
+              </li>
+              <li>Participants frequently cited poor communication from organization leaders, lack of event promotion,
+                 and difficulty managing tasks across different platforms as their biggest pain points.</li>
+            </ul>
+          <p>This research formed the foundation for the app's feature set, guiding the design process with a clear focus 
+            on solving these problems.</p>
         </div>
       </div>
 
       <div class="container algin-items-center">
         <div class="col-lg-12">
-          <h1>Design Process</h1>
+          <h1>Ideation</h1>
           <div>
-            <h2>Empathize & Define</h2>
-            <p>To understand the needs of students, I conducted a survey and interviews with 10 current college students and recent graduates.
+            <p>With user insights in mind, I brainstormed features that would address the core challenges of 
+              communication, event discovery, and task management. My primary goals were to:
             </p>
-            <div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <h3>Key Findings</h3>
-                  <ul>
-                    <li><b>100% </b>of participants used social media (GroupMe, Facebook, etc.) to communicate with organizations.</li>
-                    <li><b>50% </b>relied solely on email.</li>
-                    <li><b>90% </b>learned about clubs through word-of-mouth.</li>
-                    <li><b>55% </b>discovered opportunities via social media and email.</li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <h3>Pain Points</h3>
-                  <ul>
-                    <li>Poor communication from organization coordinators, especially in larger groups.</li>
-                    <li>Lack of consistent promotion of events and opportunities.</li>
-                    <li>Difficulty in managing multiple platforms for communication.</li>
-                  </ul>
-                </div>
-                <div class="col-lg-12">
-                  <h2>User Personas</h2>
-                  <p>
-                    To ensure the app catered to diverse student needs, I created three key personas:
-                  </p>
-                  <ul>
-                    <li><b>Jasmine</b>, 18, a Rutgers freshman on the pre-med track, who struggles with the virtual transition and wants to meet new people.</li>
-                    <li><b>Eric</b>, 21, a senior in Computer Science and a club coordinator who seeks a streamlined way to coordinate meetings and share information with members.</li>
-                    <li><b>Jessica</b>, 20, a junior who started college during the pandemic and finds it difficult to discover clubs and events.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <ul>
+              <li>Create a <b>Dashboard</b> to provide students with an overview of their organizations, tasks, and upcoming events.</li>
+              <li>Develop an <b>Explore Tab</b> for students to easily find and join organizations based on their interests.</li>
+              <li>Design a <b>Task Management System</b> to help both students and organization leaders keep track of responsibilities in a clear, organized manner.</li>
+            </ul>
+            <p>
+              I also defined user personas to ensure the app catered to different user needs:
+            </p>
+            <ul>
+              <li><b>Jasmine</b>, 18, a Rutgers freshman on the pre-med track, who struggles with the virtual transition and wants to meet new people.</li>
+              <li><b>Eric</b>, 21, a senior in Computer Science and a club coordinator who seeks a streamlined way to coordinate meetings and share information with members.</li>
+              <li><b>Jessica</b>, 20, a junior who started college during the pandemic and finds it difficult to discover clubs and events.</li>
+            </ul>
+            <p>These personas helped guide the flow of the app and prioritize features based on user needs.</p>
           </div>
           <div>
-            <h2>Ideation: Translating User Insights into Features</h2>
+            <h1>Wireframing</h1>
             <p>
-              The ideation process began after synthesizing insights from user research. Based on the key pain points and needs identified, I brainstormed a 
-              set of core features that would address the challenges faced by students and organization leaders.
+              With the core features outlined, I began wireframing to visualize the app's layout and navigation. The goal at this stage was to create a simple, 
+              intuitive flow that minimized confusion and made it easy for students to accomplish tasks.
             </p>
-            <h3><b>Key Priorities</b></h3>
+            <h2>Low-fidelity Wireframes</h2>
+            <p>The initial wireframes were kept minimal, focusing on the overall layout, navigation structure, and placement of key elements like buttons, cards, 
+              and menus. These wireframes included:</p>
             <ul>
-              <li><b>Centralized communication: </b>
-                A space where students can easily communicate with organizations and receive updates in one place.
+              <li><b>Dashboard: </b>
+                A hub where students could see their upcoming events, tasks, and important updates from organizations.
               </li>
-              <li><b>Event discovery: </b>
-                An intuitive search feature where students can explore organizations and upcoming events based on their interests.
+              <li><b>Explore Tab: </b>
+                A scrollable list of organizations, categorized by interest with a search bar for easy filtering.
               </li>
-              <li><b>Task management: </b>
-                A system to help students track and complete tasks assigned within organizations, reducing the complexity of managing responsibilities.
+              <li><b>Tasks Page: </b>
+                A simple to-do list where tasks could be sorted by organization, due date, or completion status.
               </li>
-              <li><b>Personalized dashboard:</b>
-                A quick-access hub where students can view their memberships, tasks, and upcoming events, promoting ease of use.              
+            </ul>
+            <img src="img/project/AfterSchool/Sketches.png" class="img-fluid" alt="Lofi Design" style="padding-bottom: 16px;">
+            <h2>Mid-fidelity Wireframes</h2>
+            <p>Based on initial feedback, I refined the wireframes by adding more details and refining the layout:</p>
+            <ul>
+              <li>
+                Adjusted the navigation bar to make it more accessible on mobile devices.
               </li>
-              <li><b>Profile creation: </b>
-                A feature for students to create personal profiles, showcasing their interests and organization affiliations for more tailored connections.
+              <li>
+                Streamlined the Explore Tab by introducing filters for events and organizations, allowing users to search by keywords, date, or category.              </li>
+              <li>
+                Improved the Tasks Page by adding color-coded tags (e.g., "In Progress" or "Completed") to help users prioritize their work.
               </li>
             </ul>
             <p>
-              The ideation process was visualized using mind maps and user flows to outline how these features would work together to form a cohesive app. 
-              I drew inspiration from productivity tools like Trello for task management and social platforms like LinkedIn and Facebook for community engagement. 
-              My goal was to integrate the social, organizational, and management aspects seamlessly.
+              Usability testing at this stage helped identify small improvements, such as reordering sections in the Dashboard to prioritize urgent tasks and events.
             </p>
           </div>
-          <div>
-            <h2>Wireframing: Structuring the User Experience</h2>
-            <p>
-              With a clear idea of the app’s core features, I proceeded to the wireframing phase, where I laid out the structure and flow of the user experience. 
-              Wireframes helped me visualize how each feature would be organized, ensuring ease of navigation and prioritizing essential user actions.
-            </p>
-            <div>
-              <h3><b>Low-Fidelity Wireframes</b></h3>
-              <ul>
-                <li><b>Objective: </b>
-                  Capture the basic layout, hierarchy, and structure of key screens.
-                </li>
-                <li><b>Key Screens Wireframed: </b>
-                </li>
-                <ul>
-                  <li>Onboarding/Greeting Page</li>
-                  <li>Dashboard</li>
-                  <li>Explore Tab</li>
-                  <li>Task Page</li>
-                  <li>Profile Page</li>
-                </ul>
-              </ul>
-            </div>
-            <div>
-              <h3><b>Mid-Fidelity Wireframes</b></h3>
-              <p>
-                After validating the low-fidelity wireframes through peer feedback, I moved to mid-fidelity wireframes, introducing 
-                more detailed elements like icons, navigation patterns, and placeholder content.
-              </p>
-              <ul>
-                <li><b>Objective: </b>
-                  Test how well the layout supports user goals and ensure information is intuitively presented.
-                </li>
-                <li><b>Enhancements Made: </b>
-                  <ul>
-                    <li>Adjusted navigation menus to make them more prominent.</li>
-                    <li>Refined the hierarchy of information in the Dashboard, prioritizing tasks over less time-sensitive items like messages.</li>
-                    <li>Streamlined the Explore tab by adding filter options to make searching for organizations more precise and user-friendly.</li>
-                  </ul>
-                </li>
-              </ul>
-              <p>
-                At this stage, I began testing the wireframes with potential users, asking them to perform basic tasks like finding a specific 
-                event or checking tasks. The feedback gathered was invaluable in fine-tuning the layout and ensuring an optimal user experience.
-              </p>
-            </div>
-            <div></div>
-              <h3><b>High-Fidelity Wireframes: Brining the Vision to Life</b></h3>
-              <p>
-                Once the wireframes were finalized and validated, I moved on to high-fidelity prototyping. This stage focused on visual design, 
-                interaction details, and ensuring the final product felt polished and professional.
-              </p>
-              <ul>
-                <li><b>Objective: </b>
-                  Test how well the layout supports user goals and ensure information is intuitively presented.
-                </li>
-                <li><b>Enhancements Made: </b>
-                  <ul>
-                    <li>Adjusted navigation menus to make them more prominent.</li>
-                    <li>Refined the hierarchy of information in the Dashboard, prioritizing tasks over less time-sensitive items like messages.</li>
-                    <li>Streamlined the Explore tab by adding filter options to make searching for organizations more precise and user-friendly.</li>
-                  </ul>
-                </li>
-              </ul>
-              <p>
-                At this stage, I began testing the wireframes with potential users, asking them to perform basic tasks like finding a specific 
-                event or checking tasks. The feedback gathered was invaluable in fine-tuning the layout and ensuring an optimal user experience.
-              </p>
-            </div>
+
           </div>
-            <div>
-              <h3>Explore & Support Vendors</h3>
+            <div class="col-lg-12">
+              <h1>High-fidelity Deisgn</h1>
+              <p>Once the wireframes were validated, I moved to high-fidelity design, where the focus was on creating a visually cohesive, polished interface.</p>
+              <h2>Final Design</h2>
+              <h3>Brand Identity</h3>
               <ul>
-                <li><b>Description: </b>
-                  Customers can explore trending and upcoming vendor events, providing visibility to vendors. This functionality helps connect vendors with 
-                  community events where they can gain more exposure.
+                <li><b>Color Scheme: </b>
+                  A combination of soft blues and oranges was chosen to evoke a sense of approachability and community, reflecting the app’s goal of bringing students together.                
                 </li>
-                <li><b>UI Elements: </b>
-                  A card-based interface showcases events and vendors, ensuring a user-friendly browsing experience.
+                <li><b>Typography: </b>
+                  A clean, modern sans-serif typeface ensured readability across various screen sizes while maintaining a professional look.
+                </li>
+                <li><b>Logo: </b>
+                  The logo featured rounded, friendly shapes to symbolize connection and collaboration, reinforcing the app's core mission.
                 </li>
               </ul>
-            </div>
-            <div>
-              <h3>Vendor Profiles & Product Listings:</h3>
+              <h3>High-Fidelity Prototypes</h3>
               <ul>
-                <li><b>Description: </b>
-                  Vendors can create a profile, upload products, and update inventory seamlessly. The platform is designed to accommodate product images and 
-                  descriptions, making it easy for vendors to showcase their offerings.
+                <li><b>Dashboard: </b>
+                  I designed a visually clean interface with a clear hierarchy. Task notifications were highlighted, with upcoming events and saved opportunities also displayed. Micro-interactions, such as subtle animations on task completion, added a layer of user engagement.                
                 </li>
-                <li><b>UI Elements: </b>
-                  Product images are displayed in a grid layout with clear pricing and descriptions. Vendors can manage their profile and inventory from their 
-                  mobile device, offering quick updates on availability.                </li>
+                <li><b>Explore Tab: </b>
+                  Organization cards were designed with vibrant imagery and minimal text, allowing users to quickly identify clubs of interest. Filters were refined for easier navigation.                
+                </li>
+                <li><b>Tasks Page: </b>
+                  Each task was displayed with tags and progress bars, giving users a clear sense of their responsibilities. Organization leaders had a separate view to assign tasks to members, simplifying their workflow.                </li>
               </ul>
-            </div>
-            <div>
-              <h3>Direct Communication (Chat Functionality)</h3>
-              <ul>
-                <li><b>Description: </b>
-                  Customers can directly communicate with vendors using the built-in messaging system. This feature helps with custom orders, delivery
-                  coordination, and answering product-related queries.
-                </li>
-                <li><b>UI Elements: </b>
-                  The chat feature is integrated directly into the vendor's profile, allowing for seamless communication without leaving the app.                
-                </li>
-              </ul>
+              <p>Interactive transitions and micro-animations were added to create a smooth, engaging experience. For example, students could swipe to mark tasks as complete, with satisfying visual feedback.</p>
+              <img src="img/project/AfterSchool/Hifi.png" class="img-fluid" alt="Hifi Design">
             </div>
           </div>
         </div>
@@ -315,27 +244,31 @@
           <p>Throughout the design and development process of the <i>AfterSchool</i> app, several challenges arose, requiring thoughtful solutions 
             to ensure the final product met user needs effectively.</p>
           <div>
-            <h2>Challenge 1: Balancing Simplicity with Functionalitys</h2>
+            <h2>Challenge 1: Fragmented Communication and Task Management</h2>
             <p>
-              During the ideation phase, it became clear that packing too many features into the app risked overwhelming users. To address this, 
-              I focused on prioritizing core features that students would find most valuable, such as task management, communication, and 
-              event discovery. Additional features were strategically placed to be secondary, accessed only when needed. This balance maintained the 
-              app’s usability without compromising its utility.
+              The first challenge was addressing the fragmented communication and task management that students faced across various platforms like email, GroupMe, and Slack. This disjointed system led to missed information and confusion. To solve this, the <i>AfterSchool</i> app centralized all communication and task management into one platform. By offering a unified task list, event calendar, and direct messaging system, the app allowed students to stay organized and informed, significantly reducing the risk of missing important updates.
             </p>
           </div>
           <div>
-            <h2>Challenge 2: Creating a Unified Experience for Different User Types</h2>
+            <h2>Challenge 2: Creating an Intuitive Experience for Multiple User Types</h2>
             <p>
-              The target users—students and organization leaders—had different needs. For students, ease of navigation and communication was critical, 
-              while for organization leaders, managing events and tasks was a priority. By designing separate yet interconnected dashboards for each group, 
-              I provided tailored functionality without fragmenting the overall experience.
+              The second challenge involved creating an intuitive user experience for both students and organization coordinators, who had different needs. Students required easy access to event discovery and task management, while coordinators needed tools to assign tasks and plan events efficiently. The solution was to design separate, interconnected dashboards for each user group, ensuring that both students and coordinators could navigate the app seamlessly, with tailored features that met their distinct workflows without overcomplicating the interface.
           </div>
           <div>
-            <h2>Challenge 3: Maintaining Engagement and User Retention</h2>
+            <h2>Challenge 3: Reducing Cognitive Overload</h2>
             <p>
-              To foster ongoing engagement, I incorporated gamification elements such as progress bars for task completion and notifications for upcoming events. 
-              This approach created a sense of achievement and urgency, encouraging students to regularly check the app and remain active in their organizations.
+              The third challenge was reducing cognitive overload for students, who often felt overwhelmed by the volume of tasks and events they needed to manage. To address this, the app employed a minimalist design with features like color-coded task statuses, progress tracking, and reminders. These design elements helped students prioritize their responsibilities and view important information at a glance, ultimately decreasing the mental strain and making the app easier to use without adding complexity.
             </p>
+          </div>
+          <div>
+            <h2>Challenge 4: Encouraging Engagement in a Virtual Environment</h2>
+            <p>
+              The fourth challenge was encouraging student engagement in a virtual environment, where students often felt disconnected from extracurricular activities without the in-person interactions they were accustomed to. To tackle this, the <i>AfterSchool</i> app introduced social features such as group messaging, event invitations, and direct communication with club coordinators, fostering a sense of community. Additionally, the “saved opportunities” function allowed students to bookmark events and organizations of interest, while notifications kept them informed and engaged with upcoming tasks and activities.            </p>
+          </div>
+          <div>
+            <h2>Challenge 5: Ensuring Scalability and Flexibility</h2>
+            <p>
+              The fifth challenge was ensuring that the app could scale and remain flexible enough to accommodate a wide variety of student organizations, each with its own needs and structures. The solution was to design the app with modular components that allowed for customization. Organizations could tailor their profiles, events, and task lists according to their unique requirements. At the same time, the explore feature allowed students to filter and discover organizations based on their interests, ensuring that the app was adaptable to a diverse range of users without becoming overly complex.            </p>
           </div>
         </div>
       </div>
@@ -350,7 +283,7 @@
           <div>
             <h2>Outcomes</h2>
             <p>
-              The AfterSchool app successfully met user needs through a clean, user-centered design that improved task management, 
+              The <i>AfterSchool</i> app successfully met user needs through a clean, user-centered design that improved task management, 
               event discovery, and communication for students and organization leaders. Early usability tests showed increased productivity 
               and engagement as students could better organize their extracurricular activities in one central app. The app’s intuitive 
               interface for task assignment and event creation also streamlined workflows for leaders. The prototype's success generated 
@@ -390,6 +323,10 @@
             iterative design in creating digital products that make a meaningful impact on users' lives. Looking forward, I am excited to see how the 
             app evolves into a functional product that empowers students to stay organized, engaged, and connected within their academic communities.
           </p>
+          <div class="d-flex algin-items-center justify-content-center" style="padding-top: 16px;">
+            <a href="https://www.figma.com/proto/ibHuLE04IuO1SUB3JVsC8D/AfterSchool?page-id=3%3A22&node-id=133-926&node-type=canvas&viewport=331%2C74%2C0.04&t=AzdgJVipTdBlw2wu-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=78%3A3135&show-proto-sidebar=1" 
+              class="btn" style="margin: 0 .25em .5em;">View Prototype</a>
+          </div>
         </div>
       </div>
 
