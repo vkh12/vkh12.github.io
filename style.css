@@ -380,6 +380,13 @@ p {
     color: white;
     font-size: 24px;
 }
+#hero ul li {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 24px;
+}
 #hero .btn-contact {
     font-size:16px;
     font-weight: 400;
@@ -450,8 +457,15 @@ p {
     font-size: 16px;
     line-height: 1.5rem;
   }
+  #hero ul li {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
 }
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -778,6 +792,29 @@ section {
     padding: 0 5% 0 5%;
   }
 }
+#virtualvendors-hero .btn {
+  font-size:16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  width: auto; 
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-offset: 0px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#virtualvendors-hero .btn:hover {
+  border: 1px solid #fff;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  background: rgba(255, 255, 255, 0.25);
+}
 #virtualvendors .section-bg {
   background-color: #131313;
 }
@@ -795,6 +832,13 @@ section {
   color: #f5eee6;
   font-size: 28px;
 }
+#virtualvendors h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
 #virtualvendors p {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -803,12 +847,19 @@ section {
   font-size: 18px;
   line-height: 1.5em;
 }
+#virtualvendors ul li {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+  line-height: 1.75rem;
+}
 @media (min-width: 1024px) {
   #virtualvendors {
     background-attachment: fixed;
   }
 }
-
 @media (max-width: 768px) {
   #virtualvendors  h1 {
     font-family: "PPTalisman",sans-serif;
@@ -824,7 +875,22 @@ section {
     color: #f5eee6;
     font-size: 24px;
   }
+  #virtualvendors h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
   #virtualvendors p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+  #virtualvendors ul li {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -938,6 +1004,13 @@ section {
   color: #f5eee6;
   font-size: 28px;
 }
+#zumper h3 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 28px;
+}
 #zumper p {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -967,6 +1040,13 @@ section {
     font-style: normal;
     color: #f5eee6;
     font-size: 24px;
+  }
+  #zumper h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
   }
   #zumper p {
     font-family: "Raleway", sans-serif;
