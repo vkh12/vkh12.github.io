@@ -702,19 +702,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# AfterSchool
---------------------------------------------------------------*/
-#afterschool-header {
-  width: 100%;
-  height: calc(30vh);
-  background: url("img/project/AfterSchool/AfterSchoolHeader.jpg") center center;
-  height: calc(36vh);
-  background-size: cover;
-  position: relative;
-  margin-top: 50px;
-}
-
-/*--------------------------------------------------------------
 # Virtual Vendors
 --------------------------------------------------------------*/
 
@@ -905,6 +892,201 @@ section {
 
 @media (max-width: 992px) {
   #virtualvendors .container {
+    padding: 0 5% 0 5%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Afterschool
+--------------------------------------------------------------*/
+
+#afterschool-hero{
+  width: 100%;
+  height: calc(100vh);
+  background: url("img/project/AfterSchool/AfterSchoolHeader.jpg") center center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+#afterschool-hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+#afterschool-hero .uppercase {
+  text-transform: uppercase;
+}
+#afterschool-hero h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 104px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: white;
+}
+#afterschool-hero h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 28px;
+}
+#afterschool-hero h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+@media (max-width: 768px) {
+  #afterschool-hero  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: white;
+  }
+  #afterschool-hero h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
+  }
+  #afterschool-hero h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+}
+#afterschool-hero .container {
+  padding: 0 10% 0 10%;
+}
+
+@media (max-width: 992px) {
+  #afterschool-hero .container {
+    padding: 0 5% 0 5%;
+  }
+}
+#afterschool-hero .btn {
+  font-size:16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  width: auto; 
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-offset: 0px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#afterschool-hero .btn:hover {
+  border: 1px solid #fff;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  background: rgba(255, 255, 255, 0.25);
+}
+#afterschool .section-bg {
+  background-color: #131313;
+}
+#afterschool h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+#afterschool h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 28px;
+}
+#afterschool h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+#afterschool p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+#afterschool ul li {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+  line-height: 1.75rem;
+}
+@media (min-width: 1024px) {
+  #afterschool {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #afterschool  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+  #afterschool h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 24px;
+  }
+  #afterschool h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+  #afterschool p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+  #afterschool ul li {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+}
+#afterschool .container {
+  padding: 0 10% 0 10%;
+}
+
+@media (max-width: 992px) {
+  #afterschool .container {
     padding: 0 5% 0 5%;
   }
 }
