@@ -845,6 +845,7 @@ section {
   font-size: 64px;
   font-weight: 600;
   color: #f5eee6;
+  letter-spacing: 1px;
 }
 
 #synergy-mission p, #synergy-about p, #synergy-join p {
@@ -1054,6 +1055,7 @@ section {
   font-family: "PPTalisman",sans-serif;
   font-size: 28px;
   font-weight: 600;
+  letter-spacing: 1px;
   color: #f5eee6;
 }
 #virtualvendors p {
@@ -1120,6 +1122,7 @@ section {
     font-size: 24px;
     font-weight: 600;
     color: #f5eee6;
+    letter-spacing: 1px;
   }
   #virtualvendors p {
     font-family: "Raleway", sans-serif;
@@ -1269,6 +1272,7 @@ section {
   font-size: 28px;
   font-weight: 600;
   color: #f5eee6;
+  letter-spacing: 1px;
 }
 #afterschool p {
   font-family: "Raleway", sans-serif;
@@ -1311,6 +1315,7 @@ section {
     font-size: 24px;
     font-weight: 600;
     color: #f5eee6;
+    letter-spacing: 1px;
   }
   #afterschool p {
     font-family: "Raleway", sans-serif;
@@ -1460,6 +1465,7 @@ section {
   font-style: normal;
   color: #f5eee6;
   font-size: 28px;
+  letter-spacing: 1px;
 }
 #zumper p {
   font-family: "Raleway", sans-serif;
@@ -1496,6 +1502,7 @@ section {
     font-size: 32px;
     font-weight: 600;
     color: #f5eee6;
+    letter-spacing: 1px;
   }
   #zumper p {
     font-family: "Raleway", sans-serif;
