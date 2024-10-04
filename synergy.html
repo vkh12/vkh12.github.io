@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Synergy - STEM Nonprofit | Victoria Hong</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header id="header" class="">
+        <div class="d-flex justify-content-between">
+          <div class="logo">
+            <h1><a href="index.html">&#8592; Back</a></h1>
+          </div>
+        </div>
+    </header><!-- End Header -->
+
+    <!-- Hero Section for Synergy -->
+    <section id="synergy-hero" class="synergy d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <h1 style="padding-bottom:16px;">
+                Empowering Students, <br>
+                Transforming Communities
+            </h1>
+            <h2 style="padding-bottom:16px;">Join <i>Synergy</i> in connecting skilled students with nonprofits to create meaningful change.</h2>
+            <div>
+                <a href="#join" class="btn scrollto" style="margin: 0 .25em .5em;">Get Involved</a>
+                <a href="#about" class="btn scrollto" style="margin: 0 .25em .5em;">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="synergy section-bg ">
+        <div class="container">
+            <h1>Our Mission</h1>
+            <p>At Synergy, we believe in the power of hands-on education to transform lives. Our mission is to provide accessible STEM programs that inspire creativity, foster innovation, and cultivate a passion for learning in underserved communities.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="synergy">
+        <div class="container">
+            <h2>About Synergy</h2>
+            <p>Founded in [Year], Synergy is a nonprofit organization focused on providing STEM education to youth from diverse backgrounds. We offer workshops, mentorship programs, and STEM competitions to spark curiosity and innovation.</p>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section id="join" class="synergy section-bg">
+        <div class="container">
+            <h1>Join Our Network</h1>
+            <h2>Empower Your Cause: Partner with Us to Mentor Tomorrow’s Leaders</h2>
+            <p>
+                At Synergy, we believe in the power of collaboration to drive positive change. Partner with us to connect with 
+                passionate students eager to contribute their skills and energy to your cause. By joining our network, you’ll 
+                not only mentor the next generation of leaders but also gain valuable support to tackle projects and initiatives. 
+                Together, we can create meaningful impact in our communities. Explore how you can make a difference today. 
+            </p>
+            <button class="btn" onclick="showJoinUsForm()">Get Involved</button>
+            <div id="join-form" style="display: none;">
+                <form>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="synergy">
+        <p>&copy; 2024 [Your Name] - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showJoinUsForm() {
+            const form = document.getElementById('join-form');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
