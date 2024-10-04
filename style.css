@@ -470,7 +470,7 @@ p {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -805,10 +805,6 @@ section {
   }
 }
 
-#synergy .container {
-  padding: 0 10%;
-}
-
 #synergy .btn, #synergy-join .btn {
   font-size: 16px;
   font-weight: 400;
@@ -846,7 +842,7 @@ section {
   }
 }
 
-#synergy-mission h1, #synergy-join h1 {
+#synergy-mission h1, #synergy-about h1, #synergy-join h1 {
   font-family: "PPTalisman", sans-serif;
   font-size: 64px;
   font-weight: 600;
