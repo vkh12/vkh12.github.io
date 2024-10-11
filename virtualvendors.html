@@ -60,6 +60,12 @@
         <div>
           <h1>Overview</h1>
           <h2>About the Project</h2>
+          <p>
+            The concept for <i>Virtual Vendors</i> was developed during HackHERS, a 24-hour, women-centric 
+            hackathon hosted annually by <i>Rutgers Women in Computer Science</i>. My design earned both the <b>Best 
+            FinTech Award</b>, sponsored by <i>Fiserv</i>, and <b>Best UI/UX Award</b> for its innovative approach and seamless 
+            user experience.
+          </p>
           <div class="row">
             <div class="col-lg-6">
               <p>
@@ -96,17 +102,19 @@
           <div class="col-lg-6">
             <h2>The Challenge</h2> 
             <p>
-              Virtual Vendors is an online platform designed to empower street vendors and small business owners by 
-              helping them quickly set up digital storefronts. Many vendors, especially during the COVID-19 pandemic, 
-              lacked the technical knowledge or resources to transition their businesses online. 
+              Many street vendors, particularly during the COVID-19 pandemic, faced significant barriers 
+              in transitioning their businesses online due to a lack of technical knowledge and resources. 
+              This digital divide left them struggling to adapt and sustain their livelihoods in an 
+              increasingly virtual marketplace.
             </p>
           </div>
           <div class="col-lg-6">
             <h2>The Solution</h2> 
             <p>
-              The goal of the platform was to provide an intuitive, easy-to-use solution that enabled 
-              vendors to manage their inventory, interact with customers, and increase sales digitally—all within 
-              the constraints of a 24-hour hackathon.
+              Virtual Vendors is an online platform designed to empower street vendors and small business owners by 
+              helping them quickly set up digital storefronts. The goal of the platform is to provide an intuitive, 
+              easy-to-use solution that enable vendors to manage their inventory, interact with customers, and 
+              increase sales.
             </p>
           </div>
         </div>
@@ -121,6 +129,21 @@
             The goal was to design a user-friendly, mobile-first platform that enables vendors to set up a storefront in minutes while 
             customers can discover local vendors quickly.
           </p>
+          <h2>Key Insights</h2>
+            <ul>
+              <li>
+                <b>No Commission-Free Platforms</b>: There are currently no commission-free food delivery platforms, leaving vendors with limited options to sell their products online without high fees.
+              </li>
+              <li>
+                <b>Underutilized Potential</b>: Despite their importance, street vendors are often underutilized due to a lack of promotion and effective marketing for their goods, limiting their reach and growth potential.
+              </li>
+              <li>
+                <b>Scale of Street Vending</b>: With 56,488 street vendors in the U.S. and over a billion globally, they represent a significant part of the urban economy. In New York City alone, there are approximately 20,000 vendors.
+              </li>
+              <li>
+                <b>Economic Importances</b>: Street vendors are an integral part of urban economies and play a crucial role in the labor force, especially in developing countries.
+              </li>
+            </ul>
         </div>
       </div>
 
@@ -129,19 +152,19 @@
           <h1>Design Process</h1>
           <div>
             <h2>Empathize & Define</h2>
-            <p>Given the 24-hour timeframe, I relied on secondary research and competitive analysis to understand street vendors' needs. 
-              Here’s what I found:
+            <p>
+              Given the 24-hour timeframe, I relied on secondary research and competitive analysis to understand street vendors' needs. 
             </p>
             <div>
               <div class="row">
                 <div class="col-lg-6">
-                  <h3>Key Challenges</h3>
+                  <h3>General Theme</h3>
                   <p>Vendors need an easy-to-use platform that works on mobile devices, requires minimal technical knowledge, and integrates 
                     geolocation for finding vendors in real time.
                   </p>
                 </div>
                 <div class="col-lg-6">
-                  <h3>Key Insights</h3>
+                  <h3>App Requirements</h3>
                   <ul>
                     <li>Mobile optimization is crucial, as many vendors operate solely on smartphones.</li>
                     <li>Streamlining the onboarding process and simplifying product uploads would be key to adoption.</li>
@@ -157,7 +180,7 @@
               Based on this research, I began sketching out low-fidelity wireframes in Figma. My primary focus was ensuring the 
               platform's ease of use while keeping the design minimal to fit the needs of street vendors.
             </p>
-            <h3><b>Key User Flow Priorities</b></h3>
+            <h3><b>User Flow Priorities</b></h3>
             <ul>
               <li><b>Streamlined Onboarding: </b>
                 A quick, three-step process to set up a storefront, making it possible for 
@@ -179,52 +202,26 @@
           <div>
             <h2>High-Fidelity Prototype</h2>
             <div>
-              <h3>Locate Vendors (Geolocation Feature)</h3>
               <ul>
-                <li><b>Description: </b>
-                  Customers can view a map to locate vendors near their location in real-time. Vendors can update their location 
+                <li>
+                  <b>Locate Vendors (Geolocation Feature)</b>: Customers can view a map to locate vendors near their location in real-time. Vendors can update their location 
                   as they move, ensuring customers can find them with ease.
                 </li>
-                <li><b>UI Elements: </b>
-                  The map interface is clean and integrates markers that represent vendor locations, allowing users to tap and explore more about each vendor.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>Explore & Support Vendors</h3>
-              <ul>
-                <li><b>Description: </b>
-                  Customers can explore trending and upcoming vendor events, providing visibility to vendors. This functionality helps connect vendors with 
+                <li>
+                  <b>Explore & Support Vendors</b>: Customers can explore trending and upcoming vendor events, providing visibility to vendors. This functionality helps connect vendors with 
                   community events where they can gain more exposure.
                 </li>
-                <li><b>UI Elements: </b>
-                  A card-based interface showcases events and vendors, ensuring a user-friendly browsing experience.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>Vendor Profiles & Product Listings:</h3>
-              <ul>
-                <li><b>Description: </b>
-                  Vendors can create a profile, upload products, and update inventory seamlessly. The platform is designed to accommodate product images and 
+                <li>
+                  <b>Vendor Profiles & Product Listings</b>: Vendors can create a profile, upload products, and update inventory seamlessly. The platform is designed to accommodate product images and 
                   descriptions, making it easy for vendors to showcase their offerings.
                 </li>
-                <li><b>UI Elements: </b>
-                  Product images are displayed in a grid layout with clear pricing and descriptions. Vendors can manage their profile and inventory from their 
-                  mobile device, offering quick updates on availability.                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>Direct Communication (Chat Functionality)</h3>
-              <ul>
-                <li><b>Description: </b>
-                  Customers can directly communicate with vendors using the built-in messaging system. This feature helps with custom orders, delivery
+                <li>
+                  <b>Direct Communication (Chat Functionality)</b>: Customers can directly communicate with vendors using the built-in messaging system. This feature helps with custom orders, delivery
                   coordination, and answering product-related queries.
                 </li>
-                <li><b>UI Elements: </b>
-                  The chat feature is integrated directly into the vendor's profile, allowing for seamless communication without leaving the app.                
-                </li>
               </ul>
+              <img src="img/project/VirtualVendors/HiFi.png" class="img-fluid" alt="Hifi Design" style="padding-bottom: 16px;">
+              <img src="img/project/VirtualVendors/HiFi2.png" class="img-fluid" alt="Hifi Design" style="padding-bottom: 16px;">
             </div>
           </div>
         </div>
@@ -297,11 +294,15 @@
       <div class="container algin-items-center">
         <div class="col-lg-12">
           <h1>Conclusion</h1>
-          <p><i>Virtual Vendors</i> successfully demonstrated how digital tools could be used to empower street vendors by providing a platform tailored to 
-            their unique needs. The project allowed me to apply my full-stack development skills alongside UI/UX design principles under the constraints of a 24-hour hackathon.
+          <p><i>Virtual Vendors</i> addresses the critical challenges faced by street vendors by providing a seamless, 
+            commission-free platform that connects them to customers and helps them thrive in a digital economy. 
+            By simplifying the process of locating, ordering from, and promoting vendors, the app empowers small businesses 
+            to overcome barriers, gain visibility, and grow. Through innovative technology, <i>Virtual Vendors</i> bridges 
+            the gap between traditional street markets and the modern digital marketplace, ensuring that these vital 
+            contributors to urban economies can continue to flourish.
           </p>
         </div>
-        <div style="padding-top: 16px;">
+        <div class="d-flex algin-items-center justify-content-center" style="padding-top: 16px;">
           <a href="https://devpost.com/software/virtual-vendors" class="btn" style="margin: 0 .25em .5em;" title="View Hackathon Award">View Hackathon Award</a>
           <a href="https://www.figma.com/proto/z2xwwf6tqY1OHxMvOSrOaL/Virtual-Vendors?page-id=2%3A5&node-id=12-4724&viewport=241%2C48%2C0.08&scaling=contain&starting-point-node-id=12%3A4676&show-proto-sidebar=1&t=XtQ6ozUQSr1L1LCh-1" 
           class="btn" style="margin: 0 .25em .5em;">View Prototype</a>
