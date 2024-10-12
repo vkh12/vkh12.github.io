@@ -1165,7 +1165,7 @@ section {
 }
 #virtualvendors-hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1375,7 +1375,7 @@ section {
 #zumper-hero{
   width: 100%;
   height: calc(100vh);
-  background: url("img/project/Zumper/Zumper-Header.jpg") center center;
+  background: url("img/project/Zumper/ZumperHeader.jpg") center center;
   background-size: cover;
   position: relative;
   z-index: -2;
