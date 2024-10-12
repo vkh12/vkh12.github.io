@@ -935,6 +935,222 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Human-Following Cart
+--------------------------------------------------------------*/
+
+#human-following-cart-hero{
+  width: 100%;
+  height: calc(100vh);
+  background: url("img/project/Human-Following-Cart/human-following-cart-header.png") center center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+#human-following-cart-hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+#human-following-cart-hero .uppercase {
+  text-transform: uppercase;
+}
+#human-following-cart-hero h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 104px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: white;
+}
+#human-following-cart-hero h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 28px;
+}
+#human-following-cart-hero h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  color: #f5eee6;
+}
+@media (max-width: 768px) {
+  #human-following-cart-hero  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: white;
+  }
+  #human-following-cart-hero h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 24px;
+  }
+  #human-following-cart-hero h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #f5eee6;
+  }
+}
+#human-following-cart-hero .container {
+  padding: 0 10% 0 10%;
+}
+
+@media (max-width: 992px) {
+  #human-following-cart-hero .container {
+    padding: 0 5% 0 5%;
+  }
+}
+#human-following-cart-hero .btn {
+  font-size:16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  width: auto; 
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-offset: 0px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#human-following-cart-hero .btn:hover {
+  border: 1px solid #fff;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#human-following-cart .section-bg {
+  background-color: #131313;
+}
+#human-following-cart h1 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #f5eee6;
+}
+#human-following-cart h2 {
+  font-family: "Migra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5eee6;
+  font-size: 28px;
+}
+#human-following-cart h3 {
+  font-family: "PPTalisman",sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f5eee6;
+}
+#human-following-cart p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+#human-following-cart ul li {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 18px;
+  line-height: 1.75rem;
+}
+#human-following-cart .btn {
+  font-size:16px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  width: auto; 
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-offset: 0px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+#human-following-cart .btn:hover {
+  border: 1px solid #fff;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  background: rgba(255, 255, 255, 0.25);
+}
+@media (min-width: 1024px) {
+  #human-following-cart {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #human-following-cart  h1 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: #f5eee6;
+  }
+  #human-following-cart h2 {
+    font-family: "Migra", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f5eee6;
+    font-size: 24px;
+  }
+  #human-following-cart h3 {
+    font-family: "PPTalisman",sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #f5eee6;
+    letter-spacing: 1px;
+  }
+  #human-following-cart p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+  #human-following-cart ul li {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+}
+#human-following-cart .container {
+  padding: 0 10% 0 10%;
+}
+
+@media (max-width: 992px) {
+  #human-following-cart .container {
+    padding: 0 5% 0 5%;
+  }
+}
+/*--------------------------------------------------------------
 # Virtual Vendors
 --------------------------------------------------------------*/
 
@@ -948,7 +1164,7 @@ section {
 }
 #virtualvendors-hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.9);
   position: absolute;
   bottom: 0;
   top: 0;
