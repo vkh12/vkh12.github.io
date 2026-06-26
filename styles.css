@@ -246,7 +246,7 @@ text-align: right;
 }
 
 .project-number {
-  opacity: 0.55;
+  opacity: 0.65;
 }
 
 .project-client,
@@ -261,7 +261,7 @@ text-align: right;
 .project-tags {
   margin-top: 0.3rem;
   font-size: 0.8rem;
-  opacity: 0.65;
+  opacity: 0.85;
 }
 
 .project-copy {
@@ -466,7 +466,7 @@ footer {
   font-family: "Manrope", sans-serif;
   font-size: clamp(4rem, 14vw, 13rem);
   font-weight: 600;
-  letter-spacing: -0.09em;
+  letter-spacing: -0.05em;
   line-height: 0.85;
 }
 
