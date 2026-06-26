@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Spotify mobile search redesign case study by Victoria Hong."
+    />
+    <title>Spotify Mobile Search Redesign — Victoria Hong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="project.css" />
+
+    <style>
+      :root {
+        --accent: #1db954;
+        --accent-deep: #0f5f2d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="case-nav">
+      <a class="case-brand" href="index.html">VH</a>
+      <nav aria-label="Case study navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="close-link" href="index.html#work" aria-label="Close case study">×</a>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-intro">
+          <p class="case-index">Case study / 01</p>
+          <h1>Improving high-frequency search in Spotify’s mobile app.</h1>
+        </div>
+
+        <div class="case-details">
+          <div>
+            <p class="detail-label">Timeline</p>
+            <p>March 1 – April 8, 2026</p>
+          </div>
+          <div>
+            <p class="detail-label">Role</p>
+            <p>UX Researcher<br />Product Designer</p>
+          </div>
+          <div>
+            <p class="detail-label">Team</p>
+            <p>Individual HCI Project</p>
+          </div>
+          <div>
+            <p class="detail-label">Disciplines</p>
+            <p>Needfinding<br />HCI Evaluation<br />Prototyping<br />Mobile UX</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="browser-content">
+              <div class="mock-sidebar">
+                <b>SPOTIFY</b>
+                <i></i><i></i><i></i><i></i>
+              </div>
+              <div class="mock-main">
+                <span class="mock-kicker">Mobile search redesign</span>
+                <strong>Search should be available the moment users need it.</strong>
+                <div class="mock-search"></div>
+                <div class="mock-cards"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview case-section">
+        <p class="eyebrow">Overview</p>
+        <div class="section-grid">
+          <h2>Reducing friction in one of Spotify’s most frequent interactions.</h2>
+          <div class="body-copy">
+            <p>
+              This HCI project investigated how Spotify’s mobile search experience
+              could better support fast content retrieval and exploratory discovery.
+              Through surveys, interviews, contextual apprenticeship, heuristic
+              evaluation, prototyping, and usability testing, I redesigned search around
+              a persistent bottom search bar that reduces navigation overhead.
+            </p>
+
+            <div class="impact">
+              <div>
+                <strong>17</strong>
+                <span>survey participants</span>
+              </div>
+              <div>
+                <strong>4.60</strong>
+                <span>highest-rated prototype mean</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="statement-section case-section">
+        <p class="eyebrow">The challenge</p>
+        <h2>
+          Spotify search works well overall, but small interaction costs add up
+          because users search often and in mobile contexts.
+        </h2>
+        <p class="statement-copy">
+          Users often search while commuting, exercising, studying, or multitasking.
+          Even when task completion is successful, switching to a dedicated Search tab,
+          scanning mixed content types, and filtering results can create unnecessary
+          friction for high-frequency retrieval tasks.
+        </p>
+      </section>
+
+      <section class="quote-band">
+        <p>How might we</p>
+        <h2>
+          reduce search-related interaction cost while preserving Spotify’s support
+          for discovery and exploration?
+        </h2>
+      </section>
+
+      <section class="solution case-section">
+        <p class="eyebrow">The solution</p>
+        <div class="section-grid">
+          <h2>A persistent bottom search experience.</h2>
+          <p class="body-copy">
+            The final design integrates search directly into Spotify’s Home experience.
+            A bottom-aligned search bar remains visible across states, allowing users
+            to initiate search immediately without switching tabs.
+          </p>
+        </div>
+
+        <div class="feature feature--wide">
+          <div class="feature-copy">
+            <span>01</span>
+            <h3>Persistent bottom search</h3>
+            <p>
+              Search remains fixed at the bottom of the screen, improving thumb reach
+              and reducing the need to navigate to a separate tab.
+            </p>
+          </div>
+
+          <div class="product-screen screen-dashboard" aria-hidden="true">
+            <div class="screen-top"><b>SPOTIFY</b><i></i></div>
+            <div class="dashboard-grid">
+              <div class="dashboard-welcome">
+                <small>Home + Search</small>
+                <strong>Search from wherever you are.</strong>
+                <span></span>
+              </div>
+              <div class="dashboard-card"><i></i><b>Recent searches</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Suggested songs</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Category shortcuts</b><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-pair">
+          <article class="feature">
+            <div class="feature-copy">
+              <span>02</span>
+              <h3>Unified browsing and retrieval</h3>
+              <p>
+                Search expands inline from the Home interface, helping users move
+                between discovery and known-item retrieval without cognitive switching.
+              </p>
+            </div>
+
+            <div class="phone-screen" aria-hidden="true">
+              <div class="phone-notch"></div>
+              <small>Search state</small>
+              <strong>Find songs, artists, or playlists faster.</strong>
+              <i></i><i></i><i></i>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-copy">
+              <span>03</span>
+              <h3>Prioritized search results</h3>
+              <p>
+                Exact matches appear first, followed by categorized browsing options,
+                reducing scanning effort during goal-oriented searches.
+              </p>
+            </div>
+
+            <div class="message-screen" aria-hidden="true">
+              <div><span></span><b>Search results</b></div>
+              <p>Best match first. Explore after.</p>
+              <i></i><i></i><i></i>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process case-section">
+        <p class="eyebrow">Process</p>
+        <div class="section-grid">
+          <h2>From needfinding to evaluated prototype.</h2>
+          <p class="body-copy">
+            I used an iterative HCI process to identify friction, generate design
+            alternatives, evaluate low-fidelity prototypes, and refine the strongest
+            direction into a medium-fidelity prototype.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div>
+            <span>01</span>
+            <strong>Needfind</strong>
+            <p>Survey, interviews, contextual apprenticeship, and heuristic evaluation.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Ideate</strong>
+            <p>Generated 20 ideas across navigation, retrieval, motor, and exploration themes.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Prototype</strong>
+            <p>Built three low-fidelity concepts and selected the strongest direction.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Evaluate</strong>
+            <p>Tested the final medium-fidelity prototype with five participants.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="statement-section case-section">
+        <p class="eyebrow">Research insights</p>
+        <h2>
+          Search is not just a feature. For many users, it is the primary way they
+          move through Spotify.
+        </h2>
+        <p class="statement-copy">
+          Survey results showed that 53% of participants used search multiple times
+          per day, while speed was rated highly important. Interviews and observation
+          revealed that users valued fast retrieval, clear ranking, and fewer navigation
+          steps, especially in multitasking environments.
+        </p>
+      </section>
+
+      <section class="overview case-section">
+        <p class="eyebrow">Evaluation results</p>
+        <div class="section-grid">
+          <h2>The persistent bottom search direction performed strongest.</h2>
+          <div class="body-copy">
+            <p>
+              In low-fidelity testing, Prototype 1 received the highest overall mean
+              score of 4.60. Participants described it as the fastest and most intuitive
+              because it kept search visible and reduced navigation. In final testing,
+              participants completed all representative tasks in approximately 14.4 to
+              18.5 seconds using mostly 9 to 10 clicks.
+            </p>
+
+            <div class="impact">
+              <div>
+                <strong>5</strong>
+                <span>final evaluation participants</span>
+              </div>
+              <div>
+                <strong>~6%</strong>
+                <span>average error rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reflection case-section">
+        <p class="eyebrow">Reflection</p>
+        <h2>
+          This project taught me that usability problems are not always large
+          breakdowns. Sometimes, the most meaningful improvements come from reducing
+          repeated micro-frictions in everyday interactions.
+        </h2>
+      </section>
+
+      <a class="next-project" href="zillow.html">
+        <span>Next project</span>
+        <strong>Zillow Apartment Search</strong>
+        <i>↗</i>
+      </a>
+    </main>
+  </body>
+</html>

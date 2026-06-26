@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zillow apartment search redesign case study by Victoria Hong."
+    />
+    <title>Zillow Apartment Search Redesigned for Multi-stakeholder — Victoria Hong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="project.css" />
+
+    <style>
+      :root {
+        --accent: #6aa6ff;
+        --accent-deep: #2457a6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="case-nav">
+      <a class="case-brand" href="index.html">VH</a>
+      <nav aria-label="Case study navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="close-link" href="index.html#work" aria-label="Close case study">×</a>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-intro">
+          <p class="case-index">Case study / 02</p>
+          <h1>Helping roommates make housing decisions together.</h1>
+        </div>
+
+        <div class="case-details">
+          <div>
+            <p class="detail-label">Timeline</p>
+            <p>March – May '26</p>
+          </div>
+          <div>
+            <p class="detail-label">Role</p>
+            <p>Lead Product Designer<br />UX Researcher</p>
+          </div>
+          <div>
+            <p class="detail-label">Team</p>
+            <p>Victoria Hong (myself)<br>Briana Grant<br>Han Lee</p>
+          </div>
+          <div>
+            <p class="detail-label">Process</p>
+            <p>Needfinding (User Survey, Participant Observation, Heuristic Observation, Think-Aloud Studies, Product Review Analysis)<br>
+                Individual & Group Brainstorming<br>Lo-Fi (Paper & Pencil Sketches), Mid-Fi & High-Fi Prototyping (Figma)<br>Evaluation</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="browser-content">
+              <div class="mock-sidebar">
+                <b>ZILLOW</b>
+                <i></i><i></i><i></i><i></i>
+              </div>
+              <div class="mock-main">
+                <span class="mock-kicker">Group apartment search</span>
+                <strong>Find a place that works for everyone.</strong>
+                <div class="mock-search"></div>
+                <div class="mock-cards"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview case-section">
+        <p class="eyebrow">Overview</p>
+        <div class="section-grid">
+          <h2>Redesigning apartment search for shared decision-making.</h2>
+          <div class="body-copy">
+            <p>
+              Most apartment search platforms are designed around one user’s preferences.
+              However, many people search for housing with roommates, where budget,
+              commute, safety, amenities, and neighborhood preferences must be negotiated
+              across multiple people.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="statement-section case-section">
+        <p class="eyebrow">The challenge</p>
+        <h2>
+          Apartment platforms help individuals search, but roommate groups still make
+          decisions outside the product.
+        </h2>
+        <p class="statement-copy">
+          Roommate groups often rely on screenshots, text messages, spreadsheets, and
+          separate searches to compare apartments. This makes it difficult to understand
+          tradeoffs, align priorities, and decide which listing works best for everyone.
+        </p>
+      </section>
+
+      <section class="quote-band">
+        <p>How might we</p>
+        <h2>
+          help roommate groups search, compare, and decide on apartments together within
+          one platform?
+        </h2>
+      </section>
+
+      <section class="solution case-section">
+        <p class="eyebrow">The solution</p>
+        <div class="section-grid">
+          <h2>A collaborative apartment search experience.</h2>
+          <p class="body-copy">
+            The redesigned Zillow experience introduces shared preferences, group-based
+            ranking, and collaborative review tools so roommates can move from scattered
+            coordination to a clearer shared decision-making process.
+          </p>
+        </div>
+
+        <div class="feature feature--wide">
+          <div class="feature-copy">
+            <span>01</span>
+            <h3>Shared preference profiles</h3>
+            <p>
+              Each roommate can define priorities such as budget, commute distance,
+              neighborhood, safety, amenities, and lifestyle needs.
+            </p>
+          </div>
+
+          <div class="product-screen screen-dashboard" aria-hidden="true">
+            <div class="screen-top"><b>ZILLOW</b><i></i></div>
+            <div class="dashboard-grid">
+              <div class="dashboard-welcome">
+                <small>Roommate group</small>
+                <strong>3 people, 1 shared search.</strong>
+                <span></span>
+              </div>
+              <div class="dashboard-card"><i></i><b>Budget match</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Commute fit</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Amenity priority</b><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-pair">
+          <article class="feature">
+            <div class="feature-copy">
+              <span>02</span>
+              <h3>Group compatibility ranking</h3>
+              <p>
+                Listings are ranked based on how well they satisfy the group’s combined
+                preferences instead of only one person’s filters.
+              </p>
+            </div>
+
+            <div class="phone-screen" aria-hidden="true">
+              <div class="phone-notch"></div>
+              <small>Compatibility score</small>
+              <strong>92% group match</strong>
+              <i></i><i></i><i></i>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-copy">
+              <span>03</span>
+              <h3>Collaborative listing review</h3>
+              <p>
+                Roommates can save listings, leave comments, compare tradeoffs, and vote
+                on apartments in one shared decision space.
+              </p>
+            </div>
+
+            <div class="message-screen" aria-hidden="true">
+              <div><span></span><b>Group discussion</b></div>
+              <p>Does this listing work for everyone?</p>
+              <i></i><i></i><i></i>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="process case-section">
+        <p class="eyebrow">Process</p>
+        <div class="section-grid">
+          <h2>From individual search to multi-stakeholder relevance.</h2>
+          <p class="body-copy">
+            I approached the redesign through an HCI and information retrieval lens,
+            focusing on how relevance changes when multiple users must agree on one
+            shared outcome.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div>
+            <span>01</span>
+            <strong>Research</strong>
+            <p>Studied apartment search behavior and collaborative decision-making pain points.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Frame</strong>
+            <p>Defined the problem around preference conflict, fairness, and group relevance.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Design</strong>
+            <p>Created user flows, ranking logic, wireframes, and collaborative search features.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Refine</strong>
+            <p>Improved clarity around compatibility scores, shared preferences, and group actions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="statement-section case-section">
+        <p class="eyebrow">Key insight</p>
+        <h2>
+          Designing for groups means designing for negotiation, not just discovery.
+        </h2>
+        <p class="statement-copy">
+          A strong apartment search experience should not only return relevant listings.
+          It should help people understand why a listing works, who it works for, and
+          what tradeoffs still need to be discussed.
+        </p>
+      </section>
+
+      <section class="reflection case-section">
+        <p class="eyebrow">Reflection</p>
+        <h2>
+          This project helped me understand that relevance is not always individual.
+          In collaborative decisions, the best result is the one that supports alignment,
+          compromise, and trust.
+        </h2>
+      </section>
+
+      <a class="next-project" href="spotify.html">
+        <span>Next project</span>
+        <strong>Spotify  </strong>
+        <i>↗</i>
+      </a>
+    </main>
+  </body>
+</html>
