@@ -152,7 +152,7 @@ button {
 .hero-statement p {
   margin: 0;
   font-family: "Manrope", sans-serif;
-  font-size: clamp(1.35rem, 2.6vw, 2.5rem);
+  font-size: clamp(1.5rem, 2vw, 1.75rem);
   font-weight: 500;
   line-height: 1.18;
 }
@@ -165,7 +165,7 @@ button {
 .brace {
   color: var(--paper-muted);
   font-family: "Manrope", sans-serif;
-  font-size: clamp(4rem, 9vw, 8rem);
+  font-size: clamp(2rem, 8vw, 12rem);
   font-weight: 400;
   line-height: 1;
 }
@@ -183,6 +183,10 @@ button {
 
 .work {
   padding: 9rem var(--pad) 0;
+}
+
+.work-title{
+text-align: right;
 }
 
 .section-heading {
