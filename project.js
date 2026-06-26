@@ -1,118 +1,139 @@
 const projects = {
-  orbit: {
+  placeholder: {
     index: "01",
-    name: "Orbit Health",
-    title: "Making care feel easier to navigate",
-    timeline: "January–May 2026",
-    role: "Lead Product Designer<br>UX Researcher",
-    team: "Your Name<br>Product & Engineering",
-    disciplines: "Research<br>Product design<br>Prototyping",
+    name: "Coming Soon",
+    title: "A third case study is coming soon.",
+    timeline: "TBD",
+    role: "UX Researcher<br>Product Designer",
+    team: "TBD",
+    disciplines: "Research<br>Design<br>Prototyping",
     accent: "#a88bff",
     deep: "#5f42ac",
-    logo: "ORBIT",
-    mockHeading: "Your care, all in one place.",
-    overviewHeading: "A clearer path through a complicated system.",
+    logo: "TBD",
+    mockHeading: "More work coming soon.",
+    overviewHeading: "This case study is still in progress.",
     overviewCopy:
-      "Orbit brings appointments, care plans, and support into one calm, understandable experience. The project focused on reducing uncertainty at the moments when people need clarity most.",
-    impactOneNumber: "42%",
-    impactOneLabel: "faster task completion",
-    impactTwoNumber: "3×",
-    impactTwoLabel: "clearer next steps",
-    problemHeading:
-      "Patients were piecing together critical information across too many places.",
+      "Use this space for your third portfolio project. You can replace this placeholder with a UPS AI product, couponing app, robotics project, or another HCI case study.",
+    impactOneNumber: "TBD",
+    impactOneLabel: "metric",
+    impactTwoNumber: "TBD",
+    impactTwoLabel: "outcome",
+    problemHeading: "Define the core problem here.",
     problemCopy:
-      "Interviews showed that the problem was not a lack of information—it was the effort required to understand what mattered now, what came next, and who to ask for help.",
-    hmw: "help people understand and act on their care without adding more cognitive load?",
-    solutionHeading: "One home for every next step.",
+      "Add the main user pain point, business challenge, or design opportunity for this project.",
+    hmw: "frame the problem as a clear design opportunity?",
+    solutionHeading: "Describe your final solution here.",
     solutionCopy:
-      "The redesigned experience prioritizes timely actions, uses plain language, and keeps the right support within reach.",
+      "Summarize the product, feature, or redesign you created.",
     features: [
-      ["See what needs attention", "A personalized home screen turns scattered updates into a short, prioritized plan."],
-      ["Understand the details", "Complex information is translated into clear summaries with progressive disclosure."],
-      ["Get support in context", "Help appears where questions naturally arise, instead of hiding behind another menu."],
+      ["Feature one", "Describe the first key feature."],
+      ["Feature two", "Describe the second key feature."],
+      ["Feature three", "Describe the third key feature."],
     ],
     process:
-      "The work moved between research and prototyping rather than treating them as separate phases. Each round narrowed the problem and sharpened the product.",
+      "Describe your research, ideation, prototyping, and testing process here.",
     reflection:
-      "Clarity is not about showing less. It is about revealing the right thing at the right moment.",
-    next: "common-ground",
+      "Add your biggest takeaway from the project here.",
+    next: "zillow",
   },
-  "common-ground": {
+
+  zillow: {
     index: "02",
-    name: "Common Ground",
-    title: "Building belonging into every interaction",
-    timeline: "August–December 2025",
-    role: "Brand & Digital Designer<br>Creative Strategist",
-    team: "Your Name<br>Community Partners",
-    disciplines: "Brand strategy<br>Identity<br>Web design",
-    accent: "#c9f970",
-    deep: "#779b2f",
-    logo: "COMMON+",
-    mockHeading: "There is always room at the table.",
-    overviewHeading: "A brand built to make gathering feel natural.",
+    name: "Zillow Apartment Search Redesign",
+    title: "Helping roommate groups make housing decisions together.",
+    timeline: "HCI Course Project",
+    role: "UX Researcher<br>Product Designer",
+    team: "Individual Project",
+    disciplines: "HCI<br>Information Retrieval<br>Collaborative UX<br>Prototyping",
+    accent: "#6aa6ff",
+    deep: "#2457a6",
+    logo: "ZILLOW",
+    mockHeading: "Find a place that works for everyone.",
+    overviewHeading: "Redesigning apartment search for shared decision-making.",
     overviewCopy:
-      "Common Ground is a neighborhood platform for meals, stories, and events. The identity needed to feel flexible enough for many cultures while remaining unmistakably warm.",
-    impactOneNumber: "68%",
-    impactOneLabel: "increase in event discovery",
-    impactTwoNumber: "4.7/5",
-    impactTwoLabel: "community sentiment",
+      "This project redesigned Zillow’s apartment search experience to better support roommate groups who need to compare listings, balance preferences, and make housing decisions collaboratively.",
+    impactOneNumber: "MSRRF",
+    impactOneLabel: "ranking framework",
+    impactTwoNumber: "3",
+    impactTwoLabel: "collaboration features",
     problemHeading:
-      "The community was vibrant in person, but fragmented and difficult to discover online.",
+      "Apartment search platforms are built for individuals, but housing decisions are often made by groups.",
     problemCopy:
-      "People wanted a welcoming way to find events and understand the community before showing up. Existing channels felt inconsistent, transactional, and easy to miss.",
-    hmw: "translate the warmth of a shared table into a flexible digital experience?",
-    solutionHeading: "A living identity for shared experiences.",
+      "Roommate groups frequently coordinate across texts, spreadsheets, screenshots, and separate searches. This makes it difficult to compare tradeoffs and agree on listings.",
+    hmw:
+      "help roommate groups search, compare, and decide on apartments together within one platform?",
+    solutionHeading: "A collaborative apartment search experience.",
     solutionCopy:
-      "A modular brand language brings events, hosts, and stories together without flattening what makes each gathering unique.",
+      "The redesign adds shared preferences, group ranking, and collaborative discussion tools to help users make more informed housing decisions together.",
     features: [
-      ["Find your table", "A warm event directory helps people browse by mood, neighborhood, and shared interest."],
-      ["Meet the people", "Host stories create trust and give every gathering a human face."],
-      ["Keep the door open", "Flexible tools let community members create and share their own events."],
+      [
+        "Shared preference profiles",
+        "Each roommate can define priorities such as budget, commute, neighborhood, amenities, and safety."
+      ],
+      [
+        "Group compatibility ranking",
+        "Listings are ranked based on how well they satisfy the group’s combined preferences instead of one person’s filters."
+      ],
+      [
+        "Collaborative listing review",
+        "Roommates can save, comment on, compare, and vote on listings in one shared decision space."
+      ],
     ],
     process:
-      "Community workshops shaped the strategy from the beginning. The system grew through collaborative making, rapid identity tests, and real event pilots.",
+      "The process included secondary research, user needs analysis, problem framing, ranking logic, wireframing, and iterative design refinements focused on reducing coordination friction.",
     reflection:
-      "A community brand should not speak for people. It should give people a richer way to speak together.",
-    next: "elsewhere",
+      "Designing for multiple stakeholders requires more than adding sharing features. The experience must support negotiation, compromise, and trust.",
+    next: "spotify",
   },
-  elsewhere: {
+spotify: {
     index: "03",
     name: "Spotify",
-    title: "Reimagining the way we discover a city",
-    timeline: "March 1 – April 8, 2026",
-    role: "UX Researcher<br>UX Designer",
-    team: "Myself",
-    disciplines: "HCI Principles<br>Needfinding<br>User Research<br>Human-centered Design<br>Prototype<br>Evaluation",
-    accent: "#ff806f",
-    deep: "#a63e31",
-    logo: "ELSEWHERE",
-    mockHeading: "Skip the checklist. Follow your curiosity.",
-    overviewHeading: "Travel discovery without the top-ten sameness.",
+    title: "Breaking language barriers through music.",
+    timeline: "HCI Course Project",
+    role: "UX Researcher<br>Product Designer",
+    team: "Individual Project",
+    disciplines: "HCI<br>User Research<br>Accessibility<br>Prototyping",
+    accent: "#1DB954",
+    deep: "#0f5f2d",
+    logo: "SPOTIFY",
+    mockHeading: "Translate lyrics without leaving the listening experience.",
+    overviewHeading: "Making global music and audio easier to understand.",
     overviewCopy:
-      "Elsewhere is a speculative travel companion that recommends places through feeling, context, and serendipity instead of popularity rankings.",
-    impactOneNumber: "2.4×",
-    impactOneLabel: "more saved discoveries",
-    impactTwoNumber: "87%",
-    impactTwoLabel: "felt recommendations were personal",
+      "This project explored how Spotify could support real-time lyric and podcast translation so users can engage with music, artists, and spoken content across languages.",
+    impactOneNumber: "HCI",
+    impactOneLabel: "course project",
+    impactTwoNumber: "3",
+    impactTwoLabel: "core features designed",
     problemHeading:
-      "Travel platforms kept sending everyone to the same places in the same way.",
+      "Spotify helps users discover global content, but language can limit deeper connection.",
     problemCopy:
-      "Travelers described spending hours comparing repetitive lists, only to arrive with an itinerary that felt generic. They wanted confidence without losing surprise.",
-    hmw: "help travelers find places that feel personal while preserving room for spontaneity?",
-    solutionHeading: "A compass for the kind of day you want.",
+      "Users may enjoy songs, artists, or podcasts in other languages, but often need to leave Spotify to understand lyrics or spoken content. This creates friction in the listening experience.",
+    hmw:
+      "help listeners understand multilingual content without disrupting the flow of music discovery?",
+    solutionHeading: "A contextual translation layer inside Spotify.",
     solutionCopy:
-      "Elsewhere starts with mood and context, then offers a small set of considered prompts that invite exploration rather than prescribe it.",
+      "The redesign introduces lyric translation, podcast transcript translation, and clearer language cues while preserving Spotify’s familiar listening experience.",
     features: [
-      ["Choose a feeling", "Recommendations begin with the pace, energy, and atmosphere someone wants right now."],
-      ["Follow a thread", "Each place connects to another through local stories, details, and curious associations."],
-      ["Leave room for chance", "Lightweight prompts create gentle detours without turning the day into a schedule."],
+      [
+        "Translate lyrics in real time",
+        "Users can switch between original and translated lyrics while the song continues playing."
+      ],
+      [
+        "Understand podcast content",
+        "Translated transcripts help users follow spoken audio in languages they may not fully understand."
+      ],
+      [
+        "Discover global content confidently",
+        "Language labels and translation availability help users explore international music with less uncertainty."
+      ],
     ],
     process:
-      "Diary studies revealed how people balance planning with spontaneity. Storyboards and live city walks then helped test the concept in context.",
+      "The process included identifying accessibility gaps in Spotify’s current experience, analyzing user needs around multilingual content, sketching interaction flows, and prototyping translation features that felt native to the product.",
     reflection:
-      "The best recommendation does not end the search. It makes someone more curious about what could happen next.",
-    next: "orbit",
+      "This project taught me that accessibility is not only about access to content, but also access to meaning.",
+    next: "placeholder",
   },
+  
 };
 
 const params = new URLSearchParams(window.location.search);
@@ -122,7 +143,7 @@ const nextProject = projects[project.next];
 
 document.documentElement.style.setProperty("--accent", project.accent);
 document.documentElement.style.setProperty("--accent-deep", project.deep);
-document.title = `${project.name} — Your Name`;
+document.title = `${project.name} — Victoria`;
 
 const setText = (id, value) => {
   document.querySelector(`#${id}`).textContent = value;
