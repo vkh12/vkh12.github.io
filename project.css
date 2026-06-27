@@ -107,6 +107,23 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -.065em;
   line-height: 1.05;
 }
+.case-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 0.9rem 1.25rem;
+  color: var(--ink);
+  background: var(--accent);
+  border: 1px solid rgba(13, 15, 14, 0.2);
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.case-button:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent) 82%, white);
+}
 .body-copy, .statement-copy { margin: 0; font-size: clamp(1.05rem, 1.6vw, 1.35rem); line-height: 1.55; }
 .impact { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; }
 .impact div { padding-top: 1rem; border-top: 1px solid rgba(244,240,220,.35); }
@@ -149,7 +166,8 @@ a { color: inherit; text-decoration: none; }
 .process-steps div { min-height: 16rem; padding: 1.4rem; border-right: 1px solid var(--ink); }
 .process-steps div:last-child { border: 0; }
 .process-steps span, .process-steps strong { display: block; }
-.process-steps strong { margin-top: 5rem; font: 500 2rem "Manrope"; }
+.process-steps strong { margin-top: 5rem; font: 500 2rem "Manrope"; line-height: 1;}
+.process-steps caption { max-width: 12rem; }
 .process-steps p { max-width: 12rem; }
 .reflection h2 { max-width: 75rem; }
 .next-project { position: relative; display: grid; grid-template-columns: 1fr auto; padding: 5rem var(--pad); color: var(--ink); background: var(--accent); overflow: hidden; }
