@@ -103,8 +103,9 @@ a { color: inherit; text-decoration: none; }
 .section-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(3rem, 9vw, 10rem); }
 .case-section h2, .quote-band h2 {
   margin: 0;
-  font: 500 clamp(3rem, 6vw, 6.8rem)/.98 "Manrope";
+  font: 500 clamp(3rem, 6vw, 5rem)/.98 "Manrope";
   letter-spacing: -.065em;
+  line-height: 1.05;
 }
 .body-copy, .statement-copy { margin: 0; font-size: clamp(1.05rem, 1.6vw, 1.35rem); line-height: 1.55; }
 .impact { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; }
