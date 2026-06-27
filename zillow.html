@@ -171,75 +171,311 @@
       <section class="overview case-section">
         <p class="eyebrow">Overview</p>
         <div class="section-grid">
-          <h2>Most apartment search tools are built for individual decisionmaking, but homes are often shared.</h2>
+          <h2>Designing a shared rental comparison experience for roommates.</h2>
           <div class="body-copy">
             <p>
-                This project explored how Zillow could better support roommates during apartment searching. 
-                While existing platforms make it easy to filter listings, they provide limited support for comparing
-                different priorities, discussing tradeoffs, and reaching a shared decision.
+              Finding rental housing with roommates is a collaborative but fragmented process.
+              While Zillow provides extensive property listings, the current experience primarily
+              supports individual browsing and evaluation. Roommates still have to manually
+              share links, track tradeoffs, compare listings, and align on preferences outside
+              the product.
             </p>
             <p>
-                My team and I redesigned the apartment search experience around shared preferences, group compatibility, 
-                and collaborative listing review so roommates could search, compare, and decide together in one place. 
+              Our project explored a roommate-focused rental comparison feature for Zillow’s
+              mobile interface. The goal was to help users save listings, compare properties
+              side-by-side, evaluate shared criteria, and reduce the cognitive effort involved
+              in choosing housing as a group.
             </p>
+
+            <div class="impact">
+              <div>
+                <strong>20</strong>
+                <span>survey participants</span>
+              </div>
+              <div>
+                <strong>5</strong>
+                <span>final evaluation participants</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- PROBLEM OVERVIEW -->
       <section class="statement-section case-section">
-        <p class="eyebrow">Problem Overview</p>
+        <p class="eyebrow">Problem overview</p>
         <h2>
-          Roommates struggle to align on a decision because the search process is fragmented across tools.
+          Roommates are forced to make shared housing decisions through scattered,
+          manual workflows.
         </h2>
         <p class="statement-copy">
-          Instead of making decisions directly inside Zillow, roommates often rely on screenshots, group texts, 
-          spreadsheets, separate saved lists, and verbal conversations. This creates extra coordination work and 
-          makes it harder to understand which apartments satisfy the group as a whole.
-        </p>
-        <img
-          class="case-image"
-          src="assets/zillow/current-process.png"
-          alt="Diagram showing the fragmented apartment search process across Zillow, texts, screenshots, and spreadsheets"
-        />
-        <p class="image-caption">
-          Suggested image: a current-state workflow showing how roommate groups coordinate across separate tools.
+          Zillow makes it easy to browse rental listings, but it does not fully support
+          the collaborative work that happens after users find options. Roommates often
+          share links through group chats, revisit multiple listings, compare attributes
+          from memory, and use external tools like screenshots, notes, or spreadsheets
+          to track tradeoffs.
         </p>
       </section>
 
-      <!-- HOW MIGHT WE -->
+      <!-- HMW -->
       <section class="quote-band">
         <p>How might we</p>
         <h2>
-          help roommate groups search, compare, and decide on apartments together within one platform?
+          help roommates compare rental listings, align preferences, and make housing
+          decisions together within Zillow?
         </h2>
       </section>
 
-      <!-- THE SOLUTION -->
-      <section class="solution case-section">
-        <p class="eyebrow">Our Solution</p>
+      <!-- RESEARCH METHODS -->
+      <section class="process case-section">
+        <p class="eyebrow">Research methods</p>
         <div class="section-grid">
-          <h2>A collaborative apartment search experience.</h2>
+          <h2>Using mixed methods to understand collaborative rental search.</h2>
           <p class="body-copy">
-            The redesigned Zillow experience introduces a shared search space where 
-            roommates can set individual preferences, view group compatibility, and 
-            discuss listings together before making a decision. 
+            We used survey research, participant observation, and think-aloud studies to
+            understand how people search for rental housing with roommates. These methods
+            helped us capture both what users reported and what actually happened during
+            comparison, sharing, and decision-making.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div>
+            <span>01</span>
+            <strong>Survey</strong>
+            <p>Collected rental search behaviors, tracking methods, and collaboration pain points.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Observation</strong>
+            <p>Observed the mobile workflow of browsing, sharing, and comparing Zillow listings.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Think aloud</strong>
+            <p>Captured how users reasoned through tradeoffs while comparing rental options.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Synthesis</strong>
+            <p>Translated findings into needfinding insights and design opportunities.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH FINDINGS -->
+      <section class="solution case-section">
+        <p class="eyebrow">Research findings</p>
+        <div class="section-grid">
+          <h2>Rental comparison is fragmented, cognitively demanding, and poorly supported.</h2>
+          <p class="body-copy">
+            Across our research, users compensated for missing collaborative tools by relying
+            on memory, screenshots, group chats, saved links, notes, and spreadsheets. These
+            workarounds helped users keep moving, but they also increased friction and made
+            it harder to reach confident decisions.
+          </p>
+        </div>
+
+        <div class="feature-pair">
+          <article class="feature">
+            <div class="feature-copy">
+              <span>Finding 01</span>
+              <h3>Users rely on memory to compare listings.</h3>
+              <p>
+                Because listings are viewed one at a time, users often switch back and forth
+                between properties and mentally track differences like rent, commute,
+                amenities, and safety.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-copy">
+              <span>Finding 02</span>
+              <h3>Collaboration happens outside Zillow.</h3>
+              <p>
+                Users share listings through group chats, shared documents, spreadsheets,
+                and in-person discussion, making it easy for links and feedback to get lost.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="feature-pair">
+          <article class="feature">
+            <div class="feature-copy">
+              <span>Finding 03</span>
+              <h3>Final decisions are stressful.</h3>
+              <p>
+                Roommates must reconcile different priorities such as price, location,
+                commute, amenities, bedrooms, bathrooms, and lifestyle needs before agreeing.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-copy">
+              <span>Finding 04</span>
+              <h3>Users need a centralized comparison space.</h3>
+              <p>
+                The lack of a shared comparison workspace forces users to manually organize
+                listing details across several tools and revisit information repeatedly.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- IDEATION -->
+      <section class="statement-section case-section">
+        <p class="eyebrow">Ideation</p>
+        <h2>
+          We explored solutions that moved comparison from users’ memory into the interface.
+        </h2>
+        <p class="statement-copy">
+          Our brainstorming focused on reducing cognitive load, addressing user workarounds,
+          and treating roommates as multiple stakeholders with constraints that need to be
+          reconciled. We generated concepts individually, converged as a group, and selected
+          three design alternatives for prototyping.
+        </p>
+      </section>
+
+      <!-- DESIGN ALTERNATIVES -->
+      <section class="solution case-section">
+        <p class="eyebrow">Design alternatives</p>
+        <div class="section-grid">
+          <h2>Three directions for supporting roommate decision-making.</h2>
+          <p class="body-copy">
+            Each design alternative addressed a different part of the collaborative search
+            problem: comparison, shared organization, and decision support.
+          </p>
+        </div>
+
+        <div class="feature-pair">
+          <article class="feature">
+            <div class="feature-copy">
+              <span>01</span>
+              <h3>Side-by-side comparison workspace</h3>
+              <p>
+                A structured comparison chart that helps users view listings together,
+                compare attributes, add notes, and reduce the need to mentally track
+                differences across properties.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-copy">
+              <span>02</span>
+              <h3>Central shared dashboard</h3>
+              <p>
+                A shared folder that organizes favorited listings by compatibility score,
+                helping roommates quickly identify which options best align with group
+                preferences.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="feature feature--wide">
+          <div class="feature-copy">
+            <span>03</span>
+            <h3>Decision-support system</h3>
+            <p>
+              A combined experience with shared folders, preference setting, compatibility
+              scores, comments, and conflict highlighting to make alignment and disagreement
+              more visible.
+            </p>
+          </div>
+
+          <div class="product-screen screen-dashboard" aria-hidden="true">
+            <div class="screen-top"><b>ZILLOW</b><i></i></div>
+            <div class="dashboard-grid">
+              <div class="dashboard-welcome">
+                <small>Design alternatives</small>
+                <strong>Compare. Align. Decide.</strong>
+                <span></span>
+              </div>
+              <div class="dashboard-card"><i></i><b>Comparison chart</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Shared dashboard</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Compatibility score</b><span></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MID-FI EVALUATION -->
+      <section class="process case-section">
+        <p class="eyebrow">Evaluation</p>
+        <div class="section-grid">
+          <h2>Testing which features best reduced cognitive load and supported collaboration.</h2>
+          <p class="body-copy">
+            We evaluated the mid-fidelity prototypes through semi-structured user interviews
+            and comparative tasks. Participants interacted with the design alternatives and
+            provided quantitative ratings and qualitative feedback on clarity, ease of use,
+            cognitive offloading, and collaborative decision support.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div>
+            <span>01</span>
+            <strong>Comparison chart</strong>
+            <p>Rated highly for clarity and reducing the burden of memorization.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Shared folders</strong>
+            <p>Viewed as intuitive and useful for centralizing group decisions.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Compatibility score</strong>
+            <p>Helped users make faster decisions by aggregating preferences into one metric.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Refinement</strong>
+            <p>Removed lower-value features and merged the strongest concepts into one system.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL SOLUTION -->
+      <section class="solution case-section">
+        <p class="eyebrow">Final solution</p>
+        <div class="section-grid">
+          <h2>A decision-support system for roommate rental search.</h2>
+          <p class="body-copy">
+            The final high-fidelity prototype integrates four core features: Shared Folder,
+            Side-by-Side Comparison Chart, Compatibility Score & Insights, and Renter
+            Preferences. Together, these features help roommates externalize information,
+            reduce memory burden, and make more transparent housing decisions.
           </p>
         </div>
 
         <div class="feature feature--wide">
           <div class="feature-copy">
             <span>01</span>
-            <h3>Shared roommate preference </h3>
+            <h3>Shared Folder</h3>
             <p>
-              Each roommate can define priorities such as budget, commute,
-              neighborhood, safety, amenities, pet needs, and lifestyle preferences.
+              A centralized shared space where roommates can save and access the same set
+              of listings, reducing the need to send links across group chats.
             </p>
-            <img
-                class="case-image"
-                src="assets/zillow/final-shared-preferences.png"
-                alt="Shared roommate preference profile screen"
-            />
+          </div>
+
+          <div class="product-screen screen-dashboard" aria-hidden="true">
+            <div class="screen-top"><b>ZILLOW</b><i></i></div>
+            <div class="dashboard-grid">
+              <div class="dashboard-welcome">
+                <small>Shared folder</small>
+                <strong>One place for the group’s saved homes.</strong>
+                <span></span>
+              </div>
+              <div class="dashboard-card"><i></i><b>Saved listings</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Compare</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Insights</b><span></span></div>
+            </div>
           </div>
         </div>
 
@@ -247,91 +483,127 @@
           <article class="feature">
             <div class="feature-copy">
               <span>02</span>
-              <h3>Group compatibility score</h3>
+              <h3>Side-by-side comparison chart</h3>
               <p>
-                Listings are ranked by how well they satisfy the group's combined preferences,
-                helping roommates understand tradeoffs more clearly.
+                Users can compare selected listings across rent, bedrooms, bathrooms,
+                availability, square footage, amenities, parking, safety, and neighborhood
+                factors without switching between pages.
               </p>
             </div>
-            <img
-                class="case-image"
-                src="assets/zillow/final-compatibility-score.png"
-                alt="Zillow listing card with group compatibility score"
-            />
+
+            <div class="phone-screen" aria-hidden="true">
+              <div class="phone-notch"></div>
+              <small>Compare listings</small>
+              <strong>Tradeoffs made visible.</strong>
+              <i></i><i></i><i></i>
+            </div>
           </article>
 
           <article class="feature">
             <div class="feature-copy">
               <span>03</span>
-              <h3>Collaborative listing review</h3>
+              <h3>Compatibility Score & Insights</h3>
               <p>
-                Roommates can save listings, leave comments, compare tradeoffs, and vote
-                on apartments in one shared decision space.
+                The system evaluates saved listings against each roommate’s preferences and
+                provides a score, criteria breakdown, and explanation to support faster
+                group decision-making.
               </p>
             </div>
 
-            <img
-                class="case-image"
-                src="assets/zillow/final-collaboration.png"
-                alt="Collaborative listing review screen with comments and votes."
-            />
+            <div class="message-screen" aria-hidden="true">
+              <div><span></span><b>Compatibility</b></div>
+              <p>85% group match</p>
+              <i></i><i></i><i></i>
+            </div>
           </article>
         </div>
-      </section>
 
-      <!-- TIMELINE -->
-      <section class="process case-section">
-        <p class="eyebrow">Timeline</p>
-        <div class="section-grid">
-          <h2>Over 2 months, we developed this solution...</h2>
-          <p class="body-copy">
-            The process followed a human-centered design cycle: understand the search problem, synthesize user needs,
-            define design implications, sketch and prototype solutions, and refine the final collaborative search flow. 
-          </p>
-        </div>
-
-        <div class="process-steps">
-          <div>
-            <span>01</span>
-            <strong>Research</strong>
-            <p>Studied apartment search behavior and collaborative decision-making pain points.</p>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>Frame</strong>
-            <p>Defined the problem around preference conflict, fairness, and group relevance.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Design</strong>
-            <p>Created user flows, ranking logic, wireframes, and collaborative search features.</p>
-          </div>
-          <div>
+        <div class="feature feature--wide">
+          <div class="feature-copy">
             <span>04</span>
-            <strong>Refine</strong>
-            <p>Improved clarity around compatibility scores, shared preferences, and group actions.</p>
+            <h3>Renter Preferences</h3>
+            <p>
+              Each roommate can define constraints such as budget, bedroom and bathroom
+              count, parking, amenities, and safety preferences. These inputs power the
+              comparison chart, dashboard, and compatibility insights.
+            </p>
+          </div>
+
+          <div class="product-screen screen-dashboard" aria-hidden="true">
+            <div class="screen-top"><b>RENTER PROFILE</b><i></i></div>
+            <div class="dashboard-grid">
+              <div class="dashboard-welcome">
+                <small>Preference setting</small>
+                <strong>Turn personal needs into shared criteria.</strong>
+                <span></span>
+              </div>
+              <div class="dashboard-card"><i></i><b>Budget</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Bedrooms</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Amenities</b><span></span></div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- FINAL EVALUATION RESULTS -->
+      <section class="overview case-section">
+        <p class="eyebrow">Final evaluation results</p>
+        <div class="section-grid">
+          <h2>The strongest features externalized information and simplified decisions.</h2>
+          <div class="body-copy">
+            <p>
+              In the final evaluation, participants rated all four core features highly.
+              Shared Folder received the highest overall ratings, followed closely by
+              Side-by-Side Comparison and Compatibility Score & Insights. Participants
+              especially valued features that reduced mental tracking and made group
+              preferences visible.
+            </p>
+            <p>
+              The evaluation also revealed an opportunity for improvement: users relied on
+              Compatibility Score & Insights, but wanted clearer explanations of how the
+              score was calculated.
+            </p>
+
+            <div class="impact">
+              <div>
+                <strong>4.80</strong>
+                <span>Shared Folder usefulness mean</span>
+              </div>
+              <div>
+                <strong>4.75</strong>
+                <span>Comparison cognitive-load reduction mean</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY ROLE -->
       <section class="statement-section case-section">
-        <p class="eyebrow">Key insight</p>
+        <p class="eyebrow">My role</p>
         <h2>
-          Designing for groups means designing for negotiation, not just discovery.
+            I led the project from early research synthesis through prototype refinement 
+            and final evaluation.
         </h2>
         <p class="statement-copy">
-          A strong apartment search experience should not only return relevant listings.
-          It should help people understand why a listing works, who it works for, and
-          what tradeoffs still need to be discussed.
+              As a UX researcher and product designer, I played a leading role across the 
+              project’s research, design, and evaluation phases. I conducted participant 
+              observation, developed structured materials for the think-aloud study, 
+              synthesized needfinding insights, created personas and task flows, and 
+              shaped the team’s brainstorming process. I also designed and evaluated 
+              the side-by-side comparison concept, refined the high-fidelity prototype, 
+              and helped execute the final usability evaluation to validate how the 
+              redesigned Zillow experience supported collaborative decision-making.
         </p>
       </section>
 
+      <!-- REFLECTION -->
       <section class="reflection case-section">
         <p class="eyebrow">Reflection</p>
         <h2>
-          This project helped me understand that relevance is not always individual.
-          In collaborative decisions, the best result is the one that supports alignment,
-          compromise, and trust.
+          This project taught me that collaborative search is not just about finding the
+          “best” listing. It is about helping people externalize tradeoffs, build shared
+          understanding, and move toward a decision with less cognitive friction.
         </h2>
       </section>
 
