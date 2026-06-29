@@ -100,32 +100,33 @@ a { color: inherit; text-decoration: none; }
 .mock-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin-top: 2rem; }
 .mock-cards i { height: 5rem; background: color-mix(in srgb, var(--accent) 35%, white); border-radius: .4rem; }
 .case-section { padding: clamp(6rem, 12vw, 12rem) var(--pad); }
-.section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 4vw, 4rem); }
+.section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 4vw, 6rem); }
 .case-section h2, .quote-band h2 {
   margin: 0;
-  font: 500 clamp(2.5rem, 4vw, 5rem)/.98 "Manrope";
+  font: 500 clamp(2.5rem, 6vw, 3.5rem)/.98 "Manrope";
   letter-spacing: -.065em;
-  line-height: 1.05;
+  line-height: 1.15;
 }
 .hyperlink { text-decoration: underline; }
 .hyperlink:hover { font-weight: 600; }
-.body-copy, .statement-copy { margin: 0; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.5; }
+.body-copy, .statement-copy { margin: 0; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.55; }
 .impact { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; }
 .impact div { padding-top: 1rem; border-top: 1px solid rgba(244,240,220,.35); }
 .impact strong { display: block; font: 500 clamp(2.5rem,5vw,5rem)/1 "Manrope"; letter-spacing: -.05em; }
 .impact span { display: block; margin-top: .6rem; color: var(--muted); }
 .statement-section { color: var(--ink); background: var(--paper); }
-.statement-section h2 { font-size: 2.5rem, 4vw, 5rem; }
-.statement-copy { margin-top: 1rem; }
+.statement-section h2 { max-width: 65rem; }
+.statement-copy { max-width: 42rem; margin: 3rem 0 0 auto; }
 .quote-band { padding: clamp(6rem,12vw,12rem) var(--pad); color: var(--ink); background: var(--accent); }
 .quote-band p { margin: 0 0 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: .13em; }
-.quote-band h2 { max-width: 72rem; }
+.quote-band h2 { max-width: 72rem; margin: 0; font: 500 clamp(2.5rem, 6vw, 3.5rem)/.98 "Manrope"; letter-spacing: -.065em; line-height: 1.15;}
 .solution { background: #171918; }
-.feature { margin-top: 2rem; }
-.feature--wide { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; }
+.user { color: var(--ink); background: var(--paper); }
+.feature { margin-top: 7rem; }
+.feature--wide { display: grid; grid-template-columns: .48fr 1.52fr; gap: 3rem; align-items: end; }
 .feature-copy span { color: var(--accent); }
-.feature-copy h3 { margin: 1rem 0; font: 500 clamp(1.5rem,4vw,2.5rem)/1 "Manrope"; letter-spacing: -.05em; }
-.feature-copy p { margin: 1rem 0; color: var(--muted); line-height: 1.55; }
+.feature-copy h3 { margin: 1rem 0; font: 500 clamp(2rem,4vw,4rem)/1 "Manrope"; letter-spacing: -.05em; }
+.feature-copy p { color: var(--muted); line-height: 1.55; }
 .product-screen { min-height: 38rem; color: var(--ink); }
 .screen-top { display: flex; justify-content: space-between; padding: 1.3rem; border-bottom: 1px solid #ccc; }
 .screen-top i { width: 2rem; height: 2rem; background: var(--accent); border-radius: 50%; }
@@ -152,9 +153,9 @@ a { color: inherit; text-decoration: none; }
 .process-steps div:last-child { border: 0; }
 .process-steps span, .process-steps strong { display: block; }
 .process-steps strong { margin-top: 5rem; margin-bottom: 0.5rem; font: 500 2rem "Manrope"; line-height: 1;}
-.process-steps caption { max-width: 12rem; line-height: 1;}
-.process-steps p { line-height: 1.5; }
-.reflection h2 { max-width: 75rem; }
+.process-steps caption { max-width: 12rem; line-height: 0.85;}
+.process-steps p { max-width: 12rem; }
+.process-steps .full-width { grid-column: 1 / -1; min-height: auto; border: 0; }
 .next-project { position: relative; display: grid; grid-template-columns: 1fr auto; padding: 5rem var(--pad); color: var(--ink); background: var(--accent); overflow: hidden; }
 .next-project span { grid-column: 1 / -1; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: .12em; }
 .next-project strong { font: 500 clamp(4rem,10vw,11rem)/.85 "Manrope"; letter-spacing: -.08em; }
