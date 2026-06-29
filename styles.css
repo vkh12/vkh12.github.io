@@ -211,7 +211,7 @@ text-align: right;
   font-size: clamp(3rem, 7vw, 7rem);
   font-weight: 500;
   letter-spacing: -0.065em;
-  line-height: 0.96;
+  line-height: 1;
 }
 
 .project {
