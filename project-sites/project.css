@@ -121,11 +121,11 @@ a { color: inherit; text-decoration: none; }
 .quote-band p { margin: 0 0 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: .13em; }
 .quote-band h2 { max-width: 72rem; }
 .solution { background: #171918; }
-.feature { margin-top: 7rem; }
-.feature--wide { display: grid; grid-template-columns: .48fr 1.52fr; gap: 3rem; align-items: end; }
+.feature { margin-top: 2rem; }
+.feature--wide { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; }
 .feature-copy span { color: var(--accent); }
-.feature-copy h3 { margin: 1rem 0; font: 500 clamp(2rem,4vw,4rem)/1 "Manrope"; letter-spacing: -.05em; }
-.feature-copy p { color: var(--muted); line-height: 1.55; }
+.feature-copy h3 { margin: 1rem 0; font: 500 clamp(1.5rem,4vw,2.5rem)/1 "Manrope"; letter-spacing: -.05em; }
+.feature-copy p { margin: 1rem 0; color: var(--muted); line-height: 1.55; }
 .product-screen { min-height: 38rem; color: var(--ink); }
 .screen-top { display: flex; justify-content: space-between; padding: 1.3rem; border-bottom: 1px solid #ccc; }
 .screen-top i { width: 2rem; height: 2rem; background: var(--accent); border-radius: 50%; }
