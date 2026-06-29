@@ -100,18 +100,16 @@ a { color: inherit; text-decoration: none; }
 .mock-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin-top: 2rem; }
 .mock-cards i { height: 5rem; background: color-mix(in srgb, var(--accent) 35%, white); border-radius: .4rem; }
 .case-section { padding: clamp(6rem, 12vw, 12rem) var(--pad); }
-.section-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(3rem, 4vw, 6rem); }
+.section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 4vw, 4rem); }
 .case-section h2, .quote-band h2 {
   margin: 0;
-  font: 500 clamp(3rem, 6vw, 5rem)/.98 "Manrope";
+  font: 500 clamp(2.5rem, 4vw, 5rem)/.98 "Manrope";
   letter-spacing: -.065em;
   line-height: 1.05;
 }
-.hyperlink {
-  text-decoration: underline;
-}
-.case-button:hover { transform: translateY(-2px); background: color-mix(in srgb, var(--accent) 82%, white); }
-.body-copy, .statement-copy { margin: 0; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.55; }
+.hyperlink { text-decoration: underline; }
+.hyperlink:hover { font-weight: 600; }
+.body-copy, .statement-copy { margin: 0; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.5; }
 .impact { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; }
 .impact div { padding-top: 1rem; border-top: 1px solid rgba(244,240,220,.35); }
 .impact strong { display: block; font: 500 clamp(2.5rem,5vw,5rem)/1 "Manrope"; letter-spacing: -.05em; }
