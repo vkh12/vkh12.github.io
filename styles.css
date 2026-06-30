@@ -1,10 +1,12 @@
+/* ============================================================================
+   DESIGN SYSTEM & GLOBALS
+   ========================================================================== */
+
 :root {
   --ink: #0d0f0e;
   --page-background: var(--ink);
   --paper: #f4f0dc;
   --paper-muted: #c9c6b7;
-  --violet: #a88bff;
-  --blue: #70c6ff;
   --lime: #c9f970;
   --coral: #ff806f;
   --line: rgba(244, 240, 220, 0.25);
@@ -38,6 +40,10 @@ button {
   font: inherit;
 }
 
+/* ============================================================================
+   LAYOUT: Background & Header
+   ========================================================================== */
+
 .grain {
   position: fixed;
   z-index: 20;
@@ -66,6 +72,13 @@ button {
   font-weight: 700;
 }
 
+.menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+}
+
+/* Navigation */
 .site-nav {
   display: flex;
   gap: clamp(1.5rem, 3vw, 3.5rem);
@@ -90,15 +103,13 @@ button {
 }
 
 .site-nav a:hover::after,
+/* ============================================================================
+   HERO SECTION
+   ========================================================================== */
+
 .site-nav a.active::after {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-.menu-button {
-  display: none;
-  border: 0;
-  background: transparent;
 }
 
 .hero {
@@ -172,21 +183,12 @@ button {
 
 .scroll-cue {
   width: fit-content;
-  display: flex;
-  gap: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--paper);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
+/* ============================================================================
+   WORK SECTION
+   ========================================================================== */
 
 .work {
   padding: 9rem var(--pad) 0;
-}
-
-.work-title{
-text-align: right;
 }
 
 .section-heading {
@@ -212,13 +214,20 @@ text-align: right;
   font-weight: 500;
   letter-spacing: -0.065em;
   line-height: 1;
-}
+  text-align: right
 
+/* Projects */
 .project {
   position: relative;
   min-height: 36rem;
   display: grid;
   grid-template-columns: minmax(10rem, 0.85fr) minmax(18rem, 1.15fr) minmax(20rem, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  color: var(--ink);
+  border-radius: 0.35remnmax(10rem, 0.85fr) minmax(18rem, 1.15fr) minmax(20rem, 1fr);
   gap: 2rem;
   padding: 2rem;
   margin-bottom: 1.2rem;
@@ -405,6 +414,10 @@ text-align: right;
 }
 
 .ticket--two {
+/* ============================================================================
+   ABOUT SECTION
+   ========================================================================== */
+
   transform: translate(3rem, 0) rotate(7deg);
 }
 
@@ -432,6 +445,10 @@ text-align: right;
 
 .about-copy p:first-child {
   color: var(--paper);
+/* ============================================================================
+   FOOTER
+   ========================================================================== */
+
 }
 
 .text-link {
@@ -477,26 +494,19 @@ footer {
   padding-top: 1.5rem;
   border-top: 1px solid rgba(13, 15, 14, 0.35);
   font-size: 0.85rem;
-}
-
-.footer-bottom p {
-  margin: 0;
-}
-
-.footer-bottom > a {
-  justify-self: end;
-}
-
-.social-links {
-  display: flex;
-  gap: 2rem;
-}
+/* ============================================================================
+   ANIMATIONS
+   ========================================================================== */
 
 @keyframes rotate {
   to {
     transform: rotate(360deg);
   }
 }
+
+/* ============================================================================
+   RESPONSIVE: Tablet
+   ========================================================================== */
 
 @media (max-width: 900px) {
   .project {
@@ -512,6 +522,10 @@ footer {
     grid-column: 1;
   }
 }
+
+/* ============================================================================
+   RESPONSIVE: Mobile
+   ========================================================================== */
 
 @media (max-width: 700px) {
   .menu-button {
@@ -637,6 +651,25 @@ footer {
     width: 11rem;
     height: 4.2rem;
     font-size: 1.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .social-links {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITY: Reduced Motion
+   ========================================================================== */   font-size: 1.5rem;
   }
 
   .about-grid {

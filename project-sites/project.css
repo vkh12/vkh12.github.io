@@ -1,3 +1,7 @@
+/* ============================================================================
+   DESIGN SYSTEM & GLOBALS
+   ========================================================================== */
+
 :root {
   --ink: #0d0f0e;
   --paper: #f4f0dc;
@@ -7,8 +11,14 @@
   --pad: clamp(1.25rem, 5vw, 5rem);
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   color: var(--paper);
@@ -16,15 +26,25 @@ body {
   font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-a { color: inherit; text-decoration: none; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================================================
+   LAYOUT: Background & Navigation
+   ========================================================================== */
+
 .grain {
   position: fixed;
   z-index: 20;
   inset: 0;
   pointer-events: none;
-  opacity: .035;
+  opacity: 0.035;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
 }
+
 .case-nav {
   position: fixed;
   z-index: 10;
@@ -34,133 +54,581 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   color: var(--paper);
-  background: rgba(13, 15, 14, .58);
-  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(13, 15, 14, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 3rem;
   backdrop-filter: blur(16px);
   transform: translateX(-50%);
 }
-.case-brand { font-weight: 700; }
-.case-nav nav { display: flex; justify-content: center; gap: 2rem; font-size: .9rem; }
-.close-link { font-size: 1.6rem; line-height: .7; }
+
+.case-brand {
+  font-weight: 700;
+}
+
+.case-nav nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+
+.close-link {
+  font-size: 1.6rem;
+  line-height: 0.7;
+}
+
+/* ============================================================================
+   HERO SECTION
+   ========================================================================== */
+
 .case-hero {
   min-height: 100svh;
   padding: 9rem var(--pad) 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 75% 15%, rgba(255,255,255,.35), transparent 24rem),
+    radial-gradient(circle at 75% 15%, rgba(255, 255, 255, 0.35), transparent 24rem),
     linear-gradient(135deg, var(--accent), var(--accent-deep));
   overflow: hidden;
 }
-.case-index, .eyebrow, .detail-label {
-  margin: 0 0 1rem;
-  font-size: .75rem;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-}
+
 .case-intro h1 {
   max-width: 69rem;
   margin: 0;
   font-family: "Manrope", sans-serif;
   font-size: clamp(3.7rem, 8.8vw, 6.5rem);
   font-weight: 500;
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
   line-height: 1;
 }
+
+.case-index,
+.eyebrow,
+.detail-label {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
 .case-details {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin: 5rem 0 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(13,15,14,.4);
+  border-top: 1px solid rgba(13, 15, 14, 0.4);
 }
-.case-details p { margin: 0; line-height: 1.55; }
-.detail-label { opacity: .55; }
-.hero-visual { width: min(62rem, 88vw); margin-left: auto; transform: translateY(2rem); }
-.browser-frame, .product-screen {
-  padding: .55rem;
-  background: #e9e8e1;
-  border: 1px solid rgba(13,15,14,.4);
-  border-radius: .75rem;
-  box-shadow: 0 2rem 5rem rgba(13,15,14,.3);
-}
-.browser-bar { display: flex; gap: .35rem; padding: .15rem .25rem .7rem; }
-.browser-bar span { width: .45rem; height: .45rem; background: #aaa; border-radius: 50%; }
-.browser-content { min-height: 30rem; display: grid; grid-template-columns: 10rem 1fr; background: #faf9f3; border-radius: .35rem; overflow: hidden; }
-.mock-sidebar { display: flex; flex-direction: column; gap: 1.2rem; padding: 2rem 1.2rem; color: white; background: var(--accent-deep); }
-.mock-sidebar b { margin-bottom: 2rem; letter-spacing: .15em; }
-.mock-sidebar i { height: .5rem; background: rgba(255,255,255,.32); border-radius: 1rem; }
-.mock-main { display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem, 4vw, 6rem); color: var(--ink); }
-.mock-kicker { margin-bottom: 1rem; opacity: .55; }
-.mock-main strong { max-width: 33rem; font: 600 clamp(2.3rem, 5vw, 5rem)/.95 "Manrope"; letter-spacing: -.06em; }
-.mock-search { width: 80%; height: 2.8rem; margin-top: 2rem; border: 1px solid #bbb; border-radius: 2rem; }
-.mock-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin-top: 2rem; }
-.mock-cards i { height: 5rem; background: color-mix(in srgb, var(--accent) 35%, white); border-radius: .4rem; }
-.case-section { padding: clamp(3rem, 6vw, 6rem) var(--pad); }
-.section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 4vw, 6rem); }
-.case-section h2, .quote-band h2 {
+
+.case-details p {
   margin: 0;
-  font: 500 clamp(2.5rem, 6vw, 3.5rem)/.98 "Manrope";
-  letter-spacing: -.065em;
+  line-height: 1.55;
+}
+
+.detail-label {
+  opacity: 0.55;
+}
+
+.hero-visual {
+  width: min(62rem, 88vw);
+  margin-left: auto;
+  transform: translateY(2rem);
+}
+
+/* ============================================================================
+   BROWSER & PRODUCT MOCKUPS
+   ========================================================================== */
+
+.browser-frame,
+.product-screen {
+  padding: 0.55rem;
+  background: #e9e8e1;
+  border: 1px solid rgba(13, 15, 14, 0.4);
+  border-radius: 0.75rem;
+  box-shadow: 0 2rem 5rem rgba(13, 15, 14, 0.3);
+}
+
+.browser-bar {
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.15rem 0.25rem 0.7rem;
+}
+
+.browser-bar span {
+  width: 0.45rem;
+  height: 0.45rem;
+  background: #aaa;
+  border-radius: 50%;
+}
+
+.browser-content {
+  min-height: 30rem;
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  background: #faf9f3;
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.mock-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem 1.2rem;
+  color: white;
+  background: var(--accent-deep);
+}
+
+.mock-sidebar b {
+  margin-bottom: 2rem;
+  letter-spacing: 0.15em;
+}
+
+.mock-sidebar i {
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 1rem;
+}
+
+.mock-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 6rem);
+  color: var(--ink);
+}
+
+.mock-kicker {
+  margin-bottom: 1rem;
+  opacity: 0.55;
+}
+
+.mock-main strong {
+  max-width: 33rem;
+  font: 600 clamp(2.3rem, 5vw, 5rem) / 0.95 "Manrope";
+  letter-spacing: -0.06em;
+}
+
+.mock-search {
+  width: 80%;
+  height: 2.8rem;
+  margin-top: 2rem;
+  border: 1px solid #bbb;
+  border-radius: 2rem;
+}
+
+.mock-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mock-cards i {
+  height: 5rem;
+  background: color-mix(in srgb, var(--accent) 35%, white);
+  border-radius: 0.4rem;
+}
+
+/* ============================================================================
+   CASE SECTIONS & TYPOGRAPHY
+   ========================================================================== */
+
+.case-section {
+  padding: clamp(3rem, 6vw, 6rem) var(--pad);
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 4vw, 6rem);
+}
+
+.case-section h2,
+.quote-band h2 {
+  margin: 0;
+  font: 500 clamp(2.5rem, 6vw, 3.5rem) / 0.98 "Manrope";
+  letter-spacing: -0.065em;
   line-height: 1.15;
 }
-.hyperlink { text-decoration: underline; }
-.hyperlink:hover { font-weight: 600; }
-.body-copy, .statement-copy { margin: 0; font-size: clamp(1.25rem, 12vw, 1.5rem); line-height: 1.5; }
-.impact { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 4rem; }
-.impact div { padding-top: 1rem; border-top: 1px solid rgba(244,240,220,.35); }
-.impact strong { display: block; font: 500 clamp(2.5rem,5vw,5rem)/1 "Manrope"; letter-spacing: -.05em; }
-.impact span { display: block; margin-top: .6rem; color: var(--muted); }
-.statement-section { color: var(--ink); background: var(--paper); }
-.statement-section h2 { line-height: 1; margin: 0; font: 500 clamp(2.5rem, 6vw, 3.5rem)/.98 "Manrope"; letter-spacing: -.065em;}
-.statement-copy { margin: 2rem 0 0 auto; }
-.quote-band { padding: clamp(6rem,12vw,12rem) var(--pad); color: var(--ink); background: var(--accent); }
-.quote-band p { margin: 0 0 2rem; font-size: 1rem; text-transform: uppercase; letter-spacing: .13em; }
-.quote-band h2 { max-width: 72rem; margin: 0; font: 500 clamp(2.5rem, 6vw, 3.5rem)/.98 "Manrope"; letter-spacing: -.065em; line-height: 1.15;}
-.solution { background: #171918; }
-.user { color: var(--ink); background: var(--paper); }
-.feature { margin-top: 7rem; }
-.feature--wide { display: grid; grid-template-columns: .48fr 1.52fr; gap: 3rem; align-items: end; }
-.feature-copy span { color: var(--accent); }
-.feature-copy h3 { margin: 1rem 0; font: 500 clamp(1.5rem,4vw,2.5rem)/1 "Manrope"; letter-spacing: -.05em; }
-.feature-copy p { color: var(--muted); line-height: 1.55; }
-.product-screen { min-height: 38rem; color: var(--ink); }
-.screen-top { display: flex; justify-content: space-between; padding: 1.3rem; border-bottom: 1px solid #ccc; }
-.screen-top i { width: 2rem; height: 2rem; background: var(--accent); border-radius: 50%; }
-.dashboard-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; padding: clamp(1.5rem,4vw,4rem); }
-.dashboard-welcome { grid-row: span 3; min-height: 25rem; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; background: var(--accent); border-radius: .5rem; }
-.dashboard-welcome strong { max-width: 24rem; font: 600 clamp(2.5rem,4vw,4.5rem)/.95 "Manrope"; letter-spacing: -.055em; }
-.dashboard-welcome span, .dashboard-card span { height: .45rem; width: 70%; margin-top: 1rem; background: rgba(13,15,14,.25); border-radius: 1rem; }
-.dashboard-card { display: flex; flex-direction: column; justify-content: center; padding: 1.5rem; background: white; border: 1px solid #ccc; border-radius: .5rem; }
-.dashboard-card i { width: 2rem; height: 2rem; margin-bottom: 1rem; background: var(--accent); border-radius: 50%; }
-.feature-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.feature-pair .feature { display: flex; flex-direction: column; padding: 2rem; background: #242725; border-radius: .5rem; overflow: hidden; }
-.phone-screen { width: min(19rem,80%); min-height: 34rem; margin: 4rem auto -5rem; padding: 4rem 1.5rem 2rem; color: var(--ink); background: var(--paper); border: .6rem solid #050505; border-radius: 2.5rem; box-shadow: 0 2rem 4rem rgba(0,0,0,.35); }
-.phone-notch { width: 6rem; height: 1.4rem; margin: -3.3rem auto 3rem; background: #050505; border-radius: 1rem; }
-.phone-screen small, .phone-screen strong { display: block; }
-.phone-screen strong { margin: 1rem 0 3rem; font: 600 2.2rem/1 "Manrope"; letter-spacing: -.05em; }
-.phone-screen i, .message-screen i { display: block; height: 4rem; margin-top: .8rem; background: color-mix(in srgb, var(--accent) 28%, white); border-radius: .5rem; }
-.message-screen { min-height: 27rem; margin-top: 4rem; padding: 2rem; color: var(--ink); background: var(--paper); border-radius: .6rem; transform: rotate(2deg) translateY(1.5rem); }
-.message-screen div { display: flex; align-items: center; gap: 1rem; }
-.message-screen div span { width: 2.8rem; height: 2.8rem; background: var(--accent); border-radius: 50%; }
-.message-screen p { margin: 4rem 0 2rem; font: 600 2.3rem/1 "Manrope"; letter-spacing: -.05em; }
-.process { color: var(--ink); background: var(--paper); }
-.process-steps { display: grid; grid-template-columns: repeat(4,1fr); margin-top: 7rem; border-top: 1px solid var(--ink); }
-.process-steps div { min-height: 16rem; padding: 1.4rem; border-right: 1px solid var(--ink); }
-.process-steps div:last-child { border: 0; }
-.process-steps span, .process-steps strong { display: block; }
-.process-steps strong { margin-top: 5rem; margin-bottom: 0.5rem; font: 500 2rem "Manrope"; line-height: 1;}
-.process-steps caption { max-width: 12rem; line-height: 0.85;}
-.process-steps .full-width { grid-column: 1 / -1; min-height: auto; border: 0; }
-.next-project { position: relative; display: grid; grid-template-columns: 1fr auto; padding: 5rem var(--pad); color: var(--ink); background: var(--accent); overflow: hidden; }
-.next-project span { grid-column: 1 / -1; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: .12em; }
-.next-project strong { font: 500 clamp(4rem,10vw,11rem)/.85 "Manrope"; letter-spacing: -.08em; }
-.next-project i { align-self: end; font-size: 4rem; font-style: normal; }
-.expandable-image { cursor: zoom-in; transition: transform 0.2s ease, opacity 0.2s ease; }
-.expandable-image:hover { transform: scale(1.01); opacity: 0.92; }
+
+.hyperlink {
+  text-decoration: underline;
+}
+
+.hyperlink:hover {
+  font-weight: 600;
+}
+
+.body-copy,
+.statement-copy {
+  margin: 0;
+  font-size: clamp(1.25rem, 12vw, 1.5rem);
+  line-height: 1.5;
+}
+
+/* ============================================================================
+   IMPACT & QUOTE SECTIONS
+   ========================================================================== */
+
+.impact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.impact div {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(244, 240, 220, 0.35);
+}
+
+.impact strong {
+  display: block;
+  font: 500 clamp(2.5rem, 5vw, 5rem) / 1 "Manrope";
+  letter-spacing: -0.05em;
+}
+
+.impact span {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--muted);
+}
+
+.statement-section {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.statement-section h2 {
+  line-height: 1;
+  margin: 0;
+  font: 500 clamp(2.5rem, 6vw, 3.5rem) / 0.98 "Manrope";
+  letter-spacing: -0.065em;
+}
+
+.statement-copy {
+  margin: 2rem 0 0 auto;
+}
+
+.quote-band {
+  padding: clamp(6rem, 12vw, 12rem) var(--pad);
+  color: var(--ink);
+  background: var(--accent);
+}
+
+.quote-band p {
+  margin: 0 0 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.quote-band h2 {
+  max-width: 72rem;
+  margin: 0;
+  font: 500 clamp(2.5rem, 6vw, 3.5rem) / 0.98 "Manrope";
+  letter-spacing: -0.065em;
+  line-height: 1.15;
+}
+
+/* ============================================================================
+   SECTION BACKGROUNDS
+   ========================================================================== */
+
+.solution {
+  background: #171918;
+}
+
+.user {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.process {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* ============================================================================
+   FEATURES & LAYOUTS
+   ========================================================================== */
+
+.feature {
+  margin-top: 7rem;
+}
+
+.feature--wide {
+  display: grid;
+  grid-template-columns: 0.48fr 1.52fr;
+  gap: 3rem;
+  align-items: end;
+}
+
+.feature-copy span {
+  color: var(--accent);
+}
+
+.feature-copy h3 {
+  margin: 1rem 0;
+  font: 500 clamp(1.5rem, 4vw, 2.5rem) / 1 "Manrope";
+  letter-spacing: -0.05em;
+}
+
+.feature-copy p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.product-screen {
+  min-height: 38rem;
+  color: var(--ink);
+}
+
+.screen-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.screen-top i {
+  width: 2rem;
+  height: 2rem;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 4rem);
+}
+
+.dashboard-welcome {
+  grid-row: span 3;
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: var(--accent);
+  border-radius: 0.5rem;
+}
+
+.dashboard-welcome strong {
+  max-width: 24rem;
+  font: 600 clamp(2.5rem, 4vw, 4.5rem) / 0.95 "Manrope";
+  letter-spacing: -0.055em;
+}
+
+.dashboard-welcome span,
+.dashboard-card span {
+  height: 0.45rem;
+  width: 70%;
+  margin-top: 1rem;
+  background: rgba(13, 15, 14, 0.25);
+  border-radius: 1rem;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.dashboard-card i {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* Feature Pair */
+.feature-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.feature-pair .feature {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: #242725;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Phone Screen */
+.phone-screen {
+  width: min(19rem, 80%);
+  min-height: 34rem;
+  margin: 4rem auto -5rem;
+  padding: 4rem 1.5rem 2rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 0.6rem solid #050505;
+  border-radius: 2.5rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.35);
+}
+
+.phone-notch {
+  width: 6rem;
+  height: 1.4rem;
+  margin: -3.3rem auto 3rem;
+  background: #050505;
+  border-radius: 1rem;
+}
+
+.phone-screen small,
+.phone-screen strong {
+  display: block;
+}
+
+.phone-screen strong {
+  margin: 1rem 0 3rem;
+  font: 600 2.2rem / 1 "Manrope";
+  letter-spacing: -0.05em;
+}
+
+.phone-screen i,
+.message-screen i {
+  display: block;
+  height: 4rem;
+  margin-top: 0.8rem;
+  background: color-mix(in srgb, var(--accent) 28%, white);
+  border-radius: 0.5rem;
+}
+
+/* Message Screen */
+.message-screen {
+  min-height: 27rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  color: var(--ink);
+  background: var(--paper);
+  border-radius: 0.6rem;
+  transform: rotate(2deg) translateY(1.5rem);
+}
+
+.message-screen div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.message-screen div span {
+  width: 2.8rem;
+  height: 2.8rem;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.message-screen p {
+  margin: 4rem 0 2rem;
+  font: 600 2.3rem / 1 "Manrope";
+  letter-spacing: -0.05em;
+}
+
+/* ============================================================================
+   PROCESS SECTION
+   ========================================================================== */
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 7rem;
+  border-top: 1px solid var(--ink);
+}
+
+.process-steps div {
+  min-height: 16rem;
+  padding: 1.4rem;
+  border-right: 1px solid var(--ink);
+}
+
+.process-steps div:last-child {
+  border: 0;
+}
+
+.process-steps span,
+.process-steps strong {
+  display: block;
+}
+
+.process-steps strong {
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+  font: 500 2rem "Manrope";
+  line-height: 1;
+}
+
+.process-steps caption {
+  max-width: 12rem;
+  line-height: 0.85;
+}
+
+.process-steps .full-width {
+  grid-column: 1 / -1;
+  min-height: auto;
+  border: 0;
+}
+
+/* ============================================================================
+   NEXT PROJECT SECTION
+   ========================================================================== */
+
+.next-project {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 5rem var(--pad);
+  color: var(--ink);
+  background: var(--accent);
+  overflow: hidden;
+}
+
+.next-project span {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.next-project strong {
+  font: 500 clamp(4rem, 10vw, 11rem) / 0.85 "Manrope";
+  letter-spacing: -0.08em;
+}
+
+.next-project i {
+  align-self: end;
+  font-size: 4rem;
+  font-style: normal;
+}
+
+/* ============================================================================
+   IMAGE LIGHTBOX
+   ========================================================================== */
+
+.expandable-image {
+  cursor: zoom-in;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.expandable-image:hover {
+  transform: scale(1.01);
+  opacity: 0.92;
+}
+
 .image-lightbox {
   position: fixed;
   z-index: 100;
@@ -172,7 +640,12 @@ a { color: inherit; text-decoration: none; }
   background: rgba(0, 0, 0, 0.86);
   backdrop-filter: blur(12px);
 }
-.image-lightbox.is-open { display: flex; flex-direction: column; }
+
+.image-lightbox.is-open {
+  display: flex;
+  flex-direction: column;
+}
+
 .image-lightbox img {
   max-width: min(100%, 80rem);
   max-height: 82vh;
@@ -180,6 +653,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 0.75rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
 }
+
 .lightbox-close {
   position: fixed;
   top: 1.5rem;
@@ -194,6 +668,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1;
   cursor: pointer;
 }
+
 #lightbox-caption {
   max-width: 52rem;
   margin: 1rem auto 0;
@@ -202,19 +677,29 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.5;
   text-align: center;
 }
-body.lightbox-open { overflow: hidden; }
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* ============================================================================
+   INSIGHT CARDS
+   ========================================================================== */
+
 .insight-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 4rem;
 }
+
 .insight-card {
   padding: 1.5rem;
   background: #242725;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
 }
+
 .insight-card span {
   display: block;
   margin-bottom: 1.5rem;
@@ -223,42 +708,128 @@ body.lightbox-open { overflow: hidden; }
   letter-spacing: 0.13em;
   text-transform: uppercase;
 }
+
 .insight-card h3 {
   margin: 0 0 1rem;
   font: 500 clamp(1.5rem, 2vw, 2.25rem) / 1 "Manrope";
   letter-spacing: -0.04em;
 }
+
 .insight-card p {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
-}    
+}
+
+/* ============================================================================
+   RESPONSIVE: Tablet
+   ========================================================================== */
 
 @media (max-width: 760px) {
-  .case-nav nav { display: none; }
-  .case-nav { width: calc(100% - 1.5rem); }
-  .case-brand { grid-column: 1; }
-  .close-link { grid-column: 3; }
-  .case-hero { padding-top: 8rem; }
-  .case-details { grid-template-columns: 1fr 1fr; margin-top: 4rem; }
-  .hero-visual { width: 110%; }
-  .browser-content { min-height: 19rem; grid-template-columns: 4.5rem 1fr; }
-  .mock-sidebar { padding: 1rem .6rem; }
-  .mock-sidebar i { display: none; }
-  .mock-main { padding: 1.5rem; }
-  .mock-main strong { font-size: 2.2rem; }
-  .section-grid, .feature--wide, .feature-pair { grid-template-columns: 1fr; }
-  .section-grid { gap: 2rem; }
-  .feature--wide { align-items: initial; }
-  .product-screen { min-height: 27rem; }
-  .dashboard-grid { grid-template-columns: 1fr; }
-  .dashboard-welcome { grid-row: auto; min-height: 15rem; }
-  .dashboard-card { display: none; }
-  .process-steps { grid-template-columns: 1fr 1fr; }
-  .process-steps div:nth-child(2) { border-right: 0; }
-  .process-steps div { border-bottom: 1px solid var(--ink); }
-  .next-project { padding-block: 4rem; }
+  .case-nav nav {
+    display: none;
+  }
+
+  .case-nav {
+    width: calc(100% - 1.5rem);
+  }
+
+  .case-brand {
+    grid-column: 1;
+  }
+
+  .close-link {
+    grid-column: 3;
+  }
+
+  .case-hero {
+    padding-top: 8rem;
+  }
+
+  .case-details {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4rem;
+  }
+
+  .hero-visual {
+    width: 110%;
+  }
+
+  .browser-content {
+    min-height: 19rem;
+    grid-template-columns: 4.5rem 1fr;
+  }
+
+  .mock-sidebar {
+    padding: 1rem 0.6rem;
+  }
+
+  .mock-sidebar i {
+    display: none;
+  }
+
+  .mock-main {
+    padding: 1.5rem;
+  }
+
+  .mock-main strong {
+    font-size: 2.2rem;
+  }
+
+  .section-grid,
+  .feature--wide,
+  .feature-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .section-grid {
+    gap: 2rem;
+  }
+
+  .feature--wide {
+    align-items: initial;
+  }
+
+  .product-screen {
+    min-height: 27rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-welcome {
+    grid-row: auto;
+    min-height: 15rem;
+  }
+
+  .dashboard-card {
+    display: none;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-steps div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .process-steps div {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .next-project {
+    padding-block: 4rem;
+  }
 }
+
+/* ============================================================================
+   ACCESSIBILITY: Reduced Motion
+   ========================================================================== */
+
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
 }
