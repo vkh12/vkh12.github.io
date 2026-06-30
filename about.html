@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Victoria Hong, a creative technologist bridging design and engineering to create intuitive, human-centered experiences."
+    />
+    <title>About — Victoria Hong</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --ink: #0d0f0e;
+        --paper: #f4f0dc;
+        --muted: #c9c6b7;
+        --accent: #a88bff;
+        --accent-deep: #5f42ac;
+        --pad: clamp(1.25rem, 5vw, 5rem);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--paper);
+        background: var(--ink);
+        font-family: "DM Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; text-decoration: none; }
+
+      .grain {
+        position: fixed;
+        z-index: 20;
+        inset: 0;
+        pointer-events: none;
+        opacity: .035;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 30;
+        top: 1.2rem;
+        left: 50%;
+        width: min(42rem, calc(100% - 2rem));
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        padding: .75rem 1rem;
+        color: var(--paper);
+        background: rgba(13, 15, 14, .58);
+        border: 1px solid rgba(255,255,255,.14);
+        border-radius: 3rem;
+        backdrop-filter: blur(16px);
+        transform: translateX(-50%);
+      }
+      .brand { font-weight: 700; letter-spacing: -.03em; }
+      .site-nav { display: flex; justify-content: center; gap: 2rem; font-size: .9rem; }
+      .site-nav a { opacity: .72; transition: opacity .2s ease; }
+      .site-nav a:hover, .site-nav a.active { opacity: 1; }
+      .close-link { font-size: 1.6rem; line-height: .7; }
+
+      .about-hero {
+        min-height: 100svh;
+        display: grid;
+        align-items: end;
+        padding: 9rem var(--pad) 6rem;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 75% 15%, rgba(255,255,255,.38), transparent 24rem),
+          radial-gradient(circle at 20% 85%, rgba(255,255,255,.2), transparent 20rem),
+          linear-gradient(135deg, var(--accent), var(--accent-deep));
+        overflow: hidden;
+      }
+
+      .eyebrow {
+        margin: 0 0 1rem;
+        font-size: .75rem;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+
+      .about-hero h1 {
+        max-width: 78rem;
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        font-size: clamp(4rem, 10vw, 10rem);
+        font-weight: 500;
+        letter-spacing: -.075em;
+        line-height: .88;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.35fr .65fr;
+        gap: clamp(3rem, 7vw, 8rem);
+        align-items: end;
+        margin-top: 4rem;
+      }
+
+      .hero-copy {
+        max-width: 46rem;
+        margin: 0;
+        font-size: clamp(1.15rem, 2vw, 1.65rem);
+        line-height: 1.45;
+      }
+
+      .quick-card {
+        padding: 1.25rem;
+        background: rgba(13, 15, 14, .14);
+        border: 1px solid rgba(13, 15, 14, .24);
+        border-radius: .85rem;
+      }
+      .quick-card p { margin: 0; line-height: 1.55; }
+      .quick-card p + p { margin-top: 1rem; }
+      .quick-card span { display: block; opacity: .6; font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; }
+
+      .section {
+        padding: clamp(6rem, 12vw, 12rem) var(--pad);
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: clamp(3rem, 9vw, 10rem);
+      }
+
+      .section h2 {
+        margin: 0;
+        font: 500 clamp(3rem, 6vw, 6.8rem)/.98 "Manrope";
+        letter-spacing: -.065em;
+      }
+
+      .body-copy {
+        margin: 0;
+        font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+        line-height: 1.6;
+        color: var(--muted);
+      }
+      .body-copy p { margin: 0; }
+      .body-copy p + p { margin-top: 1.5rem; }
+
+      .light-section {
+        color: var(--ink);
+        background: var(--paper);
+      }
+      .light-section .body-copy { color: rgba(13, 15, 14, .72); }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 5rem;
+      }
+
+      .value-card {
+        min-height: 18rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+        color: var(--paper);
+        background: #242725;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: .75rem;
+      }
+      .value-card span {
+        color: var(--accent);
+        font-size: .8rem;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+      .value-card h3 {
+        margin: 2.5rem 0 1rem;
+        font: 500 clamp(1.75rem, 3vw, 3rem)/1 "Manrope";
+        letter-spacing: -.05em;
+      }
+      .value-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .timeline {
+        margin-top: 5rem;
+        border-top: 1px solid rgba(244,240,220,.35);
+      }
+      .timeline-item {
+        display: grid;
+        grid-template-columns: .35fr 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba(244,240,220,.18);
+      }
+      .timeline-item span {
+        color: var(--accent);
+        font-size: .8rem;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+      .timeline-item h3 {
+        margin: 0 0 .6rem;
+        font: 500 clamp(1.5rem, 2.5vw, 2.5rem)/1 "Manrope";
+        letter-spacing: -.045em;
+      }
+      .timeline-item p {
+        max-width: 52rem;
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .quote-band {
+        padding: clamp(6rem,12vw,12rem) var(--pad);
+        color: var(--ink);
+        background: var(--accent);
+      }
+      .quote-band p {
+        margin: 0 0 2rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: .13em;
+      }
+      .quote-band h2 {
+        max-width: 80rem;
+        margin: 0;
+        font: 500 clamp(3rem, 6vw, 6.8rem)/.98 "Manrope";
+        letter-spacing: -.065em;
+      }
+
+      .cta-section {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+        align-items: end;
+        padding: 5rem var(--pad);
+        color: var(--ink);
+        background: var(--accent);
+      }
+      .cta-section span {
+        grid-column: 1 / -1;
+        text-transform: uppercase;
+        letter-spacing: .12em;
+      }
+      .cta-section strong {
+        font: 500 clamp(4rem,10vw,10rem)/.85 "Manrope";
+        letter-spacing: -.08em;
+      }
+      .cta-section i {
+        align-self: end;
+        font-size: 4rem;
+        font-style: normal;
+      }
+
+      @media (max-width: 760px) {
+        .site-nav { display: none; }
+        .site-header { width: calc(100% - 1.5rem); }
+        .about-hero { padding-top: 8rem; }
+        .hero-grid, .section-grid, .cta-section { grid-template-columns: 1fr; }
+        .card-grid { grid-template-columns: 1fr; }
+        .timeline-item { grid-template-columns: 1fr; gap: 1rem; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Back to home">VH</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html#work">Work</a>
+        <a class="active" href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="close-link" href="index.html" aria-label="Close about page">×</a>
+    </header>
+
+    <main>
+      <section class="about-hero">
+        <div>
+          <p class="eyebrow">About / Victoria Hong</p>
+          <h1>Designing where people, systems, and technology meet.</h1>
+
+          <div class="hero-grid">
+            <p class="hero-copy">
+              I’m a creative technologist bridging design and engineering to create intuitive,
+              human-centered experiences. My work sits at the intersection of product strategy,
+              UX research, front-end development, and emerging AI systems.
+            </p>
+
+            <div class="quick-card" aria-label="Quick facts about Victoria Hong">
+              <p><span>Currently</span>Systems Engineer + Product/UI Design Lead at UPS</p>
+              <p><span>Studying</span>MS-HCI at Georgia Tech</p>
+              <p><span>Based in</span>Atlanta, Georgia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">How I work</p>
+        <div class="section-grid">
+          <h2>I turn complex workflows into clear, useful product experiences.</h2>
+          <div class="body-copy">
+            <p>
+              My background spans product design, software development, UX research, and systems
+              engineering. I enjoy working through ambiguity: understanding user pain points,
+              mapping workflows, prototyping ideas, and building interfaces that make difficult
+              tasks feel easier to complete.
+            </p>
+            <p>
+              Because I can move between research, design, and implementation, I think deeply
+              about both the user experience and the system behind it. I care about products that
+              are not only visually thoughtful, but also scalable, accessible, and grounded in real
+              user needs.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <article class="value-card">
+            <span>01 / Research</span>
+            <div>
+              <h3>Start with people.</h3>
+              <p>I use interviews, observation, surveys, and usability testing to understand what users actually need before deciding what to build.</p>
+            </div>
+          </article>
+
+          <article class="value-card">
+            <span>02 / Design</span>
+            <div>
+              <h3>Simplify the system.</h3>
+              <p>I translate messy workflows into user flows, information architecture, wireframes, prototypes, and design systems.</p>
+            </div>
+          </article>
+
+          <article class="value-card">
+            <span>03 / Build</span>
+            <div>
+              <h3>Make it real.</h3>
+              <p>I bring designs into production with front-end development, component thinking, and close collaboration across engineering and product teams.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section light-section">
+        <p class="eyebrow">My path</p>
+        <div class="section-grid">
+          <h2>A background shaped by engineering, design, and community.</h2>
+          <div class="body-copy">
+            <p>
+              I began my journey in engineering, where I learned how to break down complex
+              problems and design systems with intention. Over time, I became increasingly drawn
+              to the human side of technology: how people use products, where workflows break
+              down, and how thoughtful design can make digital experiences feel more intuitive.
+            </p>
+            <p>
+              Today, that combination shapes how I work. I approach design as both a creative and
+              technical practice: one that requires empathy, structure, experimentation, and a deep
+              respect for the people using the product.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Experience</p>
+        <div class="section-grid">
+          <h2>Building across product, AI, enterprise tools, and human-centered design.</h2>
+          <p class="body-copy">
+            My experience includes designing and developing enterprise web applications,
+            AI-powered tools, HCI research projects, and community-focused digital experiences.
+            Across each role, I’ve gravitated toward work that connects strategy, usability, and
+            implementation.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span>UPS</span>
+            <div>
+              <h3>Product, UI Design, and Software Development</h3>
+              <p>
+                Led user research, interface design, design system thinking, and front-end
+                development for enterprise applications using tools like React, TypeScript,
+                Tailwind CSS, Figma, and REST APIs.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span>Georgia Tech</span>
+            <div>
+              <h3>Human-Computer Interaction</h3>
+              <p>
+                Studying HCI methods, research, prototyping, and evaluation through projects like
+                Spotify mobile search and Zillow collaborative apartment search.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span>Rutgers</span>
+            <div>
+              <h3>Electrical and Computer Engineering</h3>
+              <p>
+                Built a strong technical foundation through engineering coursework, robotics
+                research, software projects, and hands-on problem solving.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span>Community</span>
+            <div>
+              <h3>Mentorship and Access</h3>
+              <p>
+                I care about expanding access to STEM and design education, especially for
+                students from underrepresented backgrounds who are still discovering what they can
+                build.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <p>What drives me</p>
+        <h2>
+          I’m most energized by problems where thoughtful design can reduce friction, create clarity,
+          and help people move forward with confidence.
+        </h2>
+      </section>
+
+      <section class="section light-section">
+        <p class="eyebrow">Beyond the screen</p>
+        <div class="section-grid">
+          <h2>I bring curiosity, care, and lived experience into the way I design.</h2>
+          <div class="body-copy">
+            <p>
+              Outside of work, I’m interested in mentorship, community-building, couponing and
+              mutual aid, robotics education, and helping people feel more confident navigating
+              technology. These experiences remind me that good design is not only about polished
+              interfaces. It is about understanding real constraints and making systems more
+              approachable.
+            </p>
+            <p>
+              I’m currently open to full-time opportunities, thoughtful freelance projects, and
+              conversations with teams building products at the intersection of UX, AI, and
+              software engineering.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <a class="cta-section" href="index.html#work">
+        <span>Selected work</span>
+        <strong>See what I’ve made</strong>
+        <i>↗</i>
+      </a>
+    </main>
+  </body>
+</html>
