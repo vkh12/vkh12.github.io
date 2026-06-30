@@ -23,6 +23,159 @@
         --accent: #1db954;
         --accent-deep: #0f5f2d;
       }
+      .case-image {
+        width: 100%;
+        display: block;
+        margin-top: 3rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.28);
+      }
+
+      .image-caption {
+        max-width: 48rem;
+        margin: 1rem auto 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .case-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        padding: 0.9rem 1.25rem;
+        color: var(--ink);
+        background: var(--accent);
+        border: 1px solid rgba(13, 15, 14, 0.2);
+        border-radius: 999px;
+        font-weight: 600;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .case-button:hover {
+        transform: translateY(-2px);
+        background: color-mix(in srgb, var(--accent) 82%, white);
+      }
+
+      .insight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 4rem;
+      }
+
+      .insight-card {
+        padding: 1.5rem;
+        background: #242725;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+      }
+
+      .statement-section .insight-card,
+      .process .insight-card {
+        color: var(--ink);
+        background: rgba(13, 15, 14, 0.06);
+        border-color: rgba(13, 15, 14, 0.16);
+      }
+
+      .insight-card span {
+        display: block;
+        margin-bottom: 1.5rem;
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .insight-card h3 {
+        margin: 0 0 1rem;
+        font: 500 clamp(1.5rem, 2vw, 2.25rem) / 1 "Manrope";
+        letter-spacing: -0.04em;
+      }
+
+      .insight-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .statement-section .insight-card p,
+      .process .insight-card p {
+        color: rgba(13, 15, 14, 0.72);
+      }
+
+      .expandable-image {
+        cursor: zoom-in;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .expandable-image:hover {
+        transform: scale(1.01);
+        opacity: 0.92;
+      }
+
+      .image-lightbox {
+        position: fixed;
+        z-index: 100;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem var(--pad);
+        background: rgba(0, 0, 0, 0.86);
+        backdrop-filter: blur(12px);
+      }
+
+      .image-lightbox.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .image-lightbox img {
+        max-width: min(100%, 80rem);
+        max-height: 82vh;
+        object-fit: contain;
+        border-radius: 0.75rem;
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+      }
+
+      .lightbox-close {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        color: white;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        border-radius: 50%;
+        font-size: 2rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      #lightbox-caption {
+        max-width: 52rem;
+        margin: 1rem auto 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      body.lightbox-open {
+        overflow: hidden;
+      }
+
+      @media (max-width: 760px) {
+        .insight-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    
     </style>
   </head>
 
@@ -282,16 +435,19 @@
               anchoring search at the bottom, dynamically transitioning between Home and Search,
               or using predictive retrieval shortcuts.
             </p>
-            <p>
-              Replace this image with a collage of your low-fidelity screens from the report.
-            </p>
           </div>
         </div>
 
         <img
           class="case-image expandable-image"
-          src="assets/spotify/low-fi-prototypes.png"
-          alt="Low-fidelity Spotify search prototype screens"
+          src="../assets/spotify/lofi-alt1&2.png"
+          alt="Low-fidelity Spotify Search Prototype Sketch 1 & 2"
+          data-caption="Low-fidelity prototypes exploring persistent bottom search, adaptive Home search, and predictive retrieval."
+        />
+         <img
+          class="case-image expandable-image"
+          src="../assets/spotify/lofi-alt3.png"
+          alt="Low-fidelity Spotify Search Prototype Sketch 3"
           data-caption="Low-fidelity prototypes exploring persistent bottom search, adaptive Home search, and predictive retrieval."
         />
       </section>
@@ -400,11 +556,7 @@
               </p>
             </div>
 
-            <div class="message-screen" aria-hidden="true">
-              <div><span></span><b>Search results</b></div>
-              <p>Best match first. Explore after.</p>
-              <i></i><i></i><i></i>
-            </div>
+            
           </article>
         </div>
       </section>
@@ -421,9 +573,7 @@
               artist. The interaction highlights how persistent search access reduces navigation
               while maintaining browsing support.
             </p>
-            <p>
-              Replace this image with your final prototype screens from the report.
-            </p>
+            
           </div>
         </div>
 
@@ -483,5 +633,8 @@
         <i>↗</i>
       </a>
     </main>
+    
+    <script src="/project-sites/project-lightbox.js""></script>
+
   </body>
 </html>
