@@ -460,17 +460,6 @@ button {
    FOOTER
    ========================================================================== */
 
-}
-
-.text-link {
-  display: inline-flex;
-  gap: 1.3rem;
-  margin-top: 1rem;
-  padding-bottom: 0.35rem;
-  color: var(--paper);
-  border-bottom: 1px solid currentColor;
-}
-
 footer {
   padding: 5rem var(--pad) 2rem;
   color: var(--ink);
@@ -505,6 +494,21 @@ footer {
   padding-top: 1.5rem;
   border-top: 1px solid rgba(13, 15, 14, 0.35);
   font-size: 0.85rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom > a {
+  justify-self: end;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+}
+
 /* ============================================================================
    ANIMATIONS
    ========================================================================== */
@@ -680,20 +684,7 @@ footer {
 
 /* ============================================================================
    ACCESSIBILITY: Reduced Motion
-   ========================================================================== */   
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .social-links {
-    grid-column: 1 / -1;
-    grid-row: 1;
-  }
+   ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   html {
