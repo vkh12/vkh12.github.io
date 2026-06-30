@@ -42,7 +42,7 @@
     <main>
       <section class="case-hero">
         <div class="case-intro">
-          <p class="case-index">Case Study / 01</p>
+          <p class="case-index">Case Study / 02</p>
           <h1>Improving high-frequency search in Spotify’s mobile app.</h1>
         </div>
 
@@ -65,25 +65,6 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="browser-frame">
-            <div class="browser-bar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="browser-content">
-              <div class="mock-sidebar">
-                <b>SPOTIFY</b>
-                <i></i><i></i><i></i><i></i>
-              </div>
-              <div class="mock-main">
-                <span class="mock-kicker">Mobile search redesign</span>
-                <strong>Search should be available the moment users need it.</strong>
-                <div class="mock-search"></div>
-                <div class="mock-cards"><i></i><i></i><i></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section class="overview case-section">
@@ -92,38 +73,31 @@
           <h2>Reducing friction in one of Spotify’s most frequent interactions.</h2>
           <div class="body-copy">
             <p>
-              This HCI project investigated how Spotify’s mobile search experience
-              could better support fast content retrieval and exploratory discovery.
-              Through surveys, interviews, contextual apprenticeship, heuristic
-              evaluation, prototyping, and usability testing, I redesigned search around
-              a persistent bottom search bar that reduces navigation overhead.
+              This project investigated how Spotify’s mobile search experience could better
+              support both known-item retrieval and exploratory discovery. Search is a primary
+              interaction mechanism for locating songs, artists, playlists, podcasts, and other
+              audio content, but the current flow can introduce small delays through tab switching,
+              mixed result types, and repeated scanning.
             </p>
-
-            <div class="impact">
-              <div>
-                <strong>17</strong>
-                <span>survey participants</span>
-              </div>
-              <div>
-                <strong>4.60</strong>
-                <span>highest-rated prototype mean</span>
-              </div>
-            </div>
+            <p>
+              I redesigned the experience around a persistent bottom search bar that keeps search
+              accessible from the Home interface, reduces navigation overhead, and supports faster
+              one-handed retrieval while preserving discovery.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="statement-section case-section">
-        <p class="eyebrow">The challenge</p>
+        <p class="eyebrow">Problem Overview</p>
         <h2>
-          Spotify search works well overall, but small interaction costs add up
-          because users search often and in mobile contexts.
+          Spotify search is effective, but repeated micro-frictions add up for frequent mobile users.
         </h2>
         <p class="statement-copy">
-          Users often search while commuting, exercising, studying, or multitasking.
-          Even when task completion is successful, switching to a dedicated Search tab,
-          scanning mixed content types, and filtering results can create unnecessary
-          friction for high-frequency retrieval tasks.
+          Locating audio content often requires navigating to a separate Search tab, entering a
+          query, and scanning across multiple result categories. These steps may seem minor, but
+          they become meaningful in high-frequency and context-constrained situations such as
+          commuting, exercising, studying, or multitasking.
         </p>
       </section>
 
@@ -135,14 +109,240 @@
         </h2>
       </section>
 
-      <section class="solution case-section">
-        <p class="eyebrow">The solution</p>
+      <!-- RESEARCH METHODS -->
+      <section class="process case-section">
+        <p class="eyebrow">Research Methods</p>
         <div class="section-grid">
-          <h2>A persistent bottom search experience.</h2>
+          <h2>Using mixed methods to understand Spotify search behavior.</h2>
+          <div class="body-copy">
+            <p>
+              I used a mixed-methods approach to understand where friction occurs in Spotify’s
+              mobile search workflow and how search intent changes across contexts. Methods
+              included a quantitative survey, semi-structured interviews, contextual apprenticeship
+              with think-aloud observation, and heuristic evaluation of the existing interface.
+            </p>
+            <p>
+              View 
+              <a class="hyperlink" href="assets/spotify/survey-results.pdf" target="_blank" rel="noopener noreferrer">Survey Results</a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-steps">
+          <div>
+            <span>01</span>
+            <strong>Survey</strong>
+            <p>Captured search frequency, perceived usability, frustration, speed, and context.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Interviews</strong>
+            <p>Explored retrieval behavior, exploratory search, friction points, and workarounds.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Think aloud</strong>
+            <p>Observed real-time search behavior, hesitation, scanning, and corrections.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Heuristics</strong>
+            <p>Evaluated visibility, match with user intent, and efficiency of use.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH FINDINGS -->
+      <section class="solution case-section">
+        <p class="eyebrow">Research findings</p>
+        <div class="section-grid">
+          <h2>Search is fast for many users, but execution-level friction still appears.</h2>
           <p class="body-copy">
-            The final design integrates search directly into Spotify’s Home experience.
-            A bottom-aligned search bar remains visible across states, allowing users
-            to initiate search immediately without switching tabs.
+            The research revealed a gap between general satisfaction and repeated interaction
+            costs. Users rated Spotify search positively overall, but interviews, observation,
+            and heuristic evaluation showed that scanning, tab switching, and mixed content
+            types still create friction during frequent use.
+          </p>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight-card">
+            <span>Finding 01</span>
+            <h3>Search is high frequency.</h3>
+            <p>
+              Over half of participants reported using search multiple times per day, making
+              even small inefficiencies meaningful over time.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <span>Finding 02</span>
+            <h3>Intent changes the task.</h3>
+            <p>
+              Retrieval-dominant users prioritized exact matches and speed, while exploratory
+              users needed stronger support for browsing, filtering, and comparison.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <span>Finding 03</span>
+            <h3>Mobile context matters.</h3>
+            <p>
+              Participants often searched while commuting, exercising, or multitasking, making
+              one-handed access and reduced scanning especially important.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- NEEDFINDING INSIGHTS -->
+      <section class="statement-section case-section">
+        <p class="eyebrow">Needfinding insights</p>
+        <h2>
+          The opportunity was not a full redesign of Spotify, but a reduction of cumulative search friction.
+        </h2>
+        <p class="statement-copy">
+          Findings pointed to four design priorities: minimize micro-interaction costs,
+          better distinguish retrieval from exploration, reduce redundant navigation between
+          Home and Search, and support fast decision-making in constrained mobile contexts.
+        </p>
+      </section>
+
+      <!-- IDEATION -->
+      <section class="solution case-section">
+        <p class="eyebrow">Ideation</p>
+        <div class="section-grid">
+          <h2>Exploring structural changes to Spotify’s search flow.</h2>
+          <p class="body-copy">
+            Brainstorming focused on interaction architecture rather than visual styling.
+            I generated twenty design ideas across four themes: navigation elimination,
+            motor optimization, retrieval optimization, and exploration support. Three
+            concepts were selected for low-fidelity prototyping.
+          </p>
+        </div>
+
+        <div class="feature-pair">
+          <article class="feature">
+            <div class="feature-copy">
+              <span>01</span>
+              <h3>Unified Home with Persistent Bottom Search</h3>
+              <p>
+                Integrates search into the Home interface with a bottom-anchored search bar,
+                reducing the need to navigate to a separate tab.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-copy">
+              <span>02</span>
+              <h3>Adaptive Unified Home Interface</h3>
+              <p>
+                Transitions dynamically between browsing and search states when the user begins
+                typing, supporting retrieval and discovery in one flow.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="feature feature--wide">
+          <div class="feature-copy">
+            <span>03</span>
+            <h3>Hybrid Home with Predictive Retrieval</h3>
+            <p>
+              Surfaces recent searches, frequently played content, and predicted recommendations
+              to reduce reliance on manual search and support frequent actions.
+            </p>
+          </div>
+
+          <div class="product-screen screen-dashboard" aria-hidden="true">
+            <div class="screen-top"><b>SPOTIFY</b><i></i></div>
+            <div class="dashboard-grid">
+              <div class="dashboard-welcome">
+                <small>Design alternatives</small>
+                <strong>Reduce steps without losing discovery.</strong>
+                <span></span>
+              </div>
+              <div class="dashboard-card"><i></i><b>Bottom search</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Adaptive home</b><span></span></div>
+              <div class="dashboard-card"><i></i><b>Predictive retrieval</b><span></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOW-FI PROTOTYPES IMAGE -->
+      <section class="overview case-section">
+        <p class="eyebrow">Low-fidelity prototypes</p>
+        <div class="section-grid">
+          <h2>Testing three navigation models before refining the final direction.</h2>
+          <div class="body-copy">
+            <p>
+              Each low-fidelity prototype represented a different way to reduce search friction:
+              anchoring search at the bottom, dynamically transitioning between Home and Search,
+              or using predictive retrieval shortcuts.
+            </p>
+            <p>
+              Replace this image with a collage of your low-fidelity screens from the report.
+            </p>
+          </div>
+        </div>
+
+        <img
+          class="case-image expandable-image"
+          src="assets/spotify/low-fi-prototypes.png"
+          alt="Low-fidelity Spotify search prototype screens"
+          data-caption="Low-fidelity prototypes exploring persistent bottom search, adaptive Home search, and predictive retrieval."
+        />
+      </section>
+
+      <!-- FIRST EVALUATION -->
+      <section class="process case-section">
+        <p class="eyebrow">First evaluation</p>
+        <div class="section-grid">
+          <h2>The persistent bottom search direction performed strongest.</h2>
+          <p class="body-copy">
+            Five participants evaluated the three low-fidelity prototypes through representative
+            search tasks: finding a specific song, searching for a playlist by genre, and searching
+            for an artist. Prototype 1 received the highest overall mean score and was perceived
+            as the fastest and most intuitive option.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <div>
+            <span>01</span>
+            <strong>Prototype 1</strong>
+            <p>Highest overall mean score at 4.60 and preferred by four out of five users.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Prototype 2</strong>
+            <p>Balanced search and browsing but introduced ambiguity in state changes.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Prototype 3</strong>
+            <p>Supported discovery but felt slower for known-item retrieval.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Direction</strong>
+            <p>Refine persistent search visibility, bottom placement, and unified browsing.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL SOLUTION -->
+      <section class="solution case-section">
+        <p class="eyebrow">Final solution</p>
+        <div class="section-grid">
+          <h2>A persistent bottom search experience built into Spotify Home.</h2>
+          <p class="body-copy">
+            The final medium-fidelity prototype integrates search directly into the Home interface.
+            Search remains fixed at the bottom of the screen, expands inline when activated, and
+            supports both known-item retrieval and exploratory browsing without requiring users
+            to switch to a separate Search tab.
           </p>
         </div>
 
@@ -151,8 +351,8 @@
             <span>01</span>
             <h3>Persistent bottom search</h3>
             <p>
-              Search remains fixed at the bottom of the screen, improving thumb reach
-              and reducing the need to navigate to a separate tab.
+              The search bar remains accessible at the bottom of the screen, improving reachability
+              and reducing the repeated step of navigating to a separate Search tab.
             </p>
           </div>
 
@@ -177,8 +377,8 @@
               <span>02</span>
               <h3>Unified browsing and retrieval</h3>
               <p>
-                Search expands inline from the Home interface, helping users move
-                between discovery and known-item retrieval without cognitive switching.
+                Search expands within the Home experience, allowing users to move between discovery
+                and goal-oriented retrieval without cognitive switching.
               </p>
             </div>
 
@@ -193,10 +393,10 @@
           <article class="feature">
             <div class="feature-copy">
               <span>03</span>
-              <h3>Prioritized search results</h3>
+              <h3>Prioritized result hierarchy</h3>
               <p>
-                Exact matches appear first, followed by categorized browsing options,
-                reducing scanning effort during goal-oriented searches.
+                Search results prioritize exact matches before broader category options, reducing
+                scanning effort during high-intent retrieval tasks.
               </p>
             </div>
 
@@ -209,72 +409,55 @@
         </div>
       </section>
 
-      <section class="process case-section">
-        <p class="eyebrow">Process</p>
-        <div class="section-grid">
-          <h2>From needfinding to evaluated prototype.</h2>
-          <p class="body-copy">
-            I used an iterative HCI process to identify friction, generate design
-            alternatives, evaluate low-fidelity prototypes, and refine the strongest
-            direction into a medium-fidelity prototype.
-          </p>
-        </div>
-
-        <div class="process-steps">
-          <div>
-            <span>01</span>
-            <strong>Needfind</strong>
-            <p>Survey, interviews, contextual apprenticeship, and heuristic evaluation.</p>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>Ideate</strong>
-            <p>Generated 20 ideas across navigation, retrieval, motor, and exploration themes.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>Prototype</strong>
-            <p>Built three low-fidelity concepts and selected the strongest direction.</p>
-          </div>
-          <div>
-            <span>04</span>
-            <strong>Evaluate</strong>
-            <p>Tested the final medium-fidelity prototype with five participants.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="statement-section case-section">
-        <p class="eyebrow">Research insights</p>
-        <h2>
-          Search is not just a feature. For many users, it is the primary way they
-          move through Spotify.
-        </h2>
-        <p class="statement-copy">
-          Survey results showed that 53% of participants used search multiple times
-          per day, while speed was rated highly important. Interviews and observation
-          revealed that users valued fast retrieval, clear ranking, and fewer navigation
-          steps, especially in multitasking environments.
-        </p>
-      </section>
-
+      <!-- FINAL PROTOTYPE IMAGE -->
       <section class="overview case-section">
-        <p class="eyebrow">Evaluation results</p>
+        <p class="eyebrow">Final prototype</p>
         <div class="section-grid">
-          <h2>The persistent bottom search direction performed strongest.</h2>
+          <h2>A medium-fidelity prototype demonstrating the complete search flow.</h2>
           <div class="body-copy">
             <p>
-              In low-fidelity testing, Prototype 1 received the highest overall mean
-              score of 4.60. Participants described it as the fastest and most intuitive
-              because it kept search visible and reduced navigation. In final testing,
-              participants completed all representative tasks in approximately 14.4 to
-              18.5 seconds using mostly 9 to 10 clicks.
+              The final prototype was created in Figma and demonstrated three representative
+              tasks: finding a specific song, finding a playlist by genre, and finding a specific
+              artist. The interaction highlights how persistent search access reduces navigation
+              while maintaining browsing support.
+            </p>
+            <p>
+              Replace this image with your final prototype screens from the report.
+            </p>
+          </div>
+        </div>
+
+        <img
+          class="case-image expandable-image"
+          src="assets/spotify/final-prototype.png"
+          alt="Final Spotify persistent bottom search prototype screens"
+          data-caption="Final medium-fidelity prototype showing the persistent bottom search interaction inside Spotify Home."
+        />
+      </section>
+
+      <!-- FINAL EVALUATION RESULTS -->
+      <section class="overview case-section">
+        <p class="eyebrow">Final evaluation results</p>
+        <div class="section-grid">
+          <h2>Participants completed tasks quickly with minimal errors.</h2>
+          <div class="body-copy">
+            <p>
+              In the final evaluation, five participants completed representative Spotify search
+              tasks using the medium-fidelity prototype. Total task completion time ranged from
+              approximately 14.4 to 18.5 seconds, with most participants completing all tasks in
+              9 to 10 clicks. The average error rate was approximately 6%.
+            </p>
+            <p>
+              Qualitative feedback indicated that participants quickly identified the persistent
+              search bar, found the layout intuitive, and felt the design reduced navigation effort.
+              Minor confusion around predictive suggestions suggested a future opportunity to
+              improve labeling and visual hierarchy.
             </p>
 
             <div class="impact">
               <div>
-                <strong>5</strong>
-                <span>final evaluation participants</span>
+                <strong>14.4–18.5s</strong>
+                <span>total task completion range</span>
               </div>
               <div>
                 <strong>~6%</strong>
